@@ -15,9 +15,9 @@ export function Process() {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            Here&apos;s What Happens <span className="text-se-orange">After You Book</span>
+            Here&apos;s What Happens <span className="text-se-orange">After You Buy</span>
           </h2>
-          <p className="text-se-muted-text">No guesswork, no long contract to sign — just a clear path to being live on LinkedIn.</p>
+          <p className="text-se-muted-text">No sales call required to start — just a clear, one-time path from purchase to your walkthrough call.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-4 gap-6 relative">

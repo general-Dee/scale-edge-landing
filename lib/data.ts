@@ -3,11 +3,7 @@ import {
   Stethoscope,
   HardHat,
   Scale,
-  PenLine,
-  Send,
-  Compass,
-  BarChart3,
-  Calendar,
+  CreditCard,
   UserCheck,
   Rocket,
   LineChart,
@@ -19,11 +15,11 @@ export interface IcpSegment {
   icon: LucideIcon
 }
 
-export interface Service {
-  title: string
-  outcome: string
-  details: string[]
-  icon: LucideIcon
+export interface SnapshotOffer {
+  name: string
+  price: number
+  priceLabel: string
+  tagline: string
 }
 
 export interface ProcessStep {
@@ -46,7 +42,7 @@ export interface SamplePost {
   isSample: true
 }
 
-// "Who We Serve" — the ICPs this retainer is built for
+// "Who We Serve" — the ICPs the Growth Snapshot is built for
 export const icpSegments: IcpSegment[] = [
   { label: "Real Estate Agents", icon: Building2 },
   { label: "Dental & Medical Practices", icon: Stethoscope },
@@ -54,59 +50,35 @@ export const icpSegments: IcpSegment[] = [
   { label: "Law Firms", icon: Scale },
 ]
 
-// "What's Included" — the four retainer pillars
-export const services: Service[] = [
-  {
-    title: "Content & Ghostwriting",
-    outcome: "Consistent, in-your-voice LinkedIn posts so you show up every week without writing a word.",
-    details: [
-      "3-4 posts per week, written and scheduled for you",
-      "Voice-matched to how you actually talk to clients",
-      "Topics pulled from your real expertise and deal flow",
-    ],
-    icon: PenLine,
-  },
-  {
-    title: "Outbound & DM Lead Gen",
-    outcome: "Direct outreach to your ideal local prospects — not just hoping the algorithm notices you.",
-    details: [
-      "Targeted connection requests to your ICP each week",
-      "Personalized DM sequences that don't feel like spam",
-      "Warm conversations handed to you to close",
-    ],
-    icon: Send,
-  },
-  {
-    title: "Strategy & Positioning",
-    outcome: "A clear point of view on what you post and why, so every piece of content earns its place.",
-    details: [
-      "Monthly content calendar built around your goals",
-      "Positioning that separates you from every other agent, dentist, or contractor on LinkedIn",
-      "Direct access to the founder for strategy, not a junior account manager",
-    ],
-    icon: Compass,
-  },
-  {
-    title: "Performance Reporting",
-    outcome: "Plain-English monthly reports on what's working, so you always know where the retainer is going.",
-    details: [
-      "Monthly report on reach, engagement, and DM replies",
-      "Live call to walk through the numbers together",
-      "Adjustments based on what's actually landing with your audience",
-    ],
-    icon: BarChart3,
-  },
-]
+// The primary offer: a one-time, paid audit — not the old $800-1,000/mo retainer.
+// The retainer still exists, but only as a soft upsell discussed after purchase
+// (see the Snapshot walkthrough-call step in `processSteps` below).
+export const snapshotOffer: SnapshotOffer = {
+  name: "Growth Snapshot",
+  price: 147,
+  priceLabel: "$147",
+  tagline:
+    "A one-time, done-for-you audit of your LinkedIn presence — what's working, what's costing you leads, and what to fix first.",
+}
 
-// Retainer onboarding flow
+// Snapshot deliverables — placeholder, owner must define exact scope, turnaround
+// time, and delivery format before launch. Follows the same TBD pattern as
+// `founderBio` below: render this verbatim wherever the Snapshot's contents are
+// described, so it's obviously unfinished rather than invented marketing copy.
+export const snapshotDeliverables =
+  "[SNAPSHOT DELIVERABLES — TBD: list what's included, e.g. profile audit / content plan / outreach template, plus turnaround time and delivery format]"
+
+// Growth Snapshot delivery flow — replaces the old cold retainer-booking funnel.
+// Step 4 is the only place the retainer is mentioned, and only as a soft,
+// post-purchase upsell, per the offer restructure.
 export const processSteps: ProcessStep[] = [
-  { step: 1, title: "Free Strategy Call", description: "30 minutes to understand your business, your ideal clients, and whether this is a fit." },
-  { step: 2, title: "Onboarding & Voice-Match (Week 1)", description: "We learn how you talk, what you know, and who you serve — no generic templates." },
-  { step: 3, title: "Content + Outreach Go Live (Week 2)", description: "Your posts start publishing and outbound DMs start going out to your target prospects." },
-  { step: 4, title: "Monthly Strategy & Reporting Call", description: "We review what's working, adjust the plan, and keep the content calendar sharp." },
+  { step: 1, title: "Purchase Your Snapshot", description: "Secure checkout via Stripe. One-time $147 payment — no subscription, no sales call required to get started." },
+  { step: 2, title: "Quick Intake", description: "A short form so we know your business, your ideal clients, and where your LinkedIn presence stands today." },
+  { step: 3, title: "We Build Your Snapshot", description: snapshotDeliverables },
+  { step: 4, title: "Walkthrough Call", description: "We walk you through the findings live. If ongoing content, outreach, and reporting support makes sense for your business, we'll discuss it then — no pressure, no cold pitch." },
 ]
 
-export const processIcons = [Calendar, UserCheck, Rocket, LineChart]
+export const processIcons = [CreditCard, UserCheck, Rocket, LineChart]
 
 // Founder credibility — placeholder values, owner must fill in before launch
 export const founderBio = {
@@ -169,33 +141,33 @@ export const leadMagnet = {
 
 export const faqs: FaqItem[] = [
   {
-    question: "Is $800-1,000/month worth it for a local business?",
+    question: "Is $147 worth it for a local business?",
     answer:
-      "If it replaces even one missed referral or one new client a quarter, it typically pays for itself. Unlike paid ads, the content and relationships we build compound — your LinkedIn presence and outbound conversations keep working even in months you don't spend a dollar on advertising.",
+      "The Snapshot is a one-time payment, not a subscription — you're paying once for a clear, outside look at your LinkedIn presence and where it's costing you leads. If it points you toward even one fix that leads to a new client, it pays for itself many times over.",
   },
   {
     question: "Why LinkedIn instead of Meta or Google ads?",
     answer:
-      "Local service businesses like real estate, dental, contracting, and law rely on trust — and LinkedIn is where decision-makers already expect professional credibility. Ads can get you clicks; consistent LinkedIn content and direct outreach build the kind of trust that turns into referrals and repeat business, without an ongoing ad spend.",
+      "Local service businesses like real estate, dental, contracting, and law rely on trust — and LinkedIn is where decision-makers already expect professional credibility. Ads can get you clicks; a consistent, well-positioned LinkedIn presence builds the kind of trust that turns into referrals and repeat business, without an ongoing ad spend.",
   },
   {
     question: "You're a new agency — how do I know this works?",
     answer:
-      "Honestly, we don't have a decade of case studies yet — we're upfront about that. What we do offer: you work directly with the founder (see the Founder Credibility section above), you can see real examples of the writing style we use, and you're never locked into a contract. If it's not working, you cancel — no penalty, no fine print.",
+      "Honestly, we don't have a decade of case studies yet — we're upfront about that. What we do offer: direct access to the founder (not a junior account manager), real examples of the writing style we use in the Proof of Craft section above, and a one-time payment instead of a long-term contract you'd have to trust us with up front.",
   },
   {
     question: "How much time does this require from me?",
     answer:
-      "About 30-45 minutes a month after onboarding: one strategy call to keep content aligned with what's actually happening in your business, and quick replies when a DM conversation needs your voice. We handle the writing, scheduling, and outreach.",
+      "About 15-20 minutes: a short intake form after checkout so we understand your business and ideal clients, plus the walkthrough call where we go over your Snapshot together. There's no ongoing weekly commitment tied to the Snapshot itself.",
   },
   {
-    question: "Is the content actually written in my voice?",
+    question: "Do you offer ongoing support after the Snapshot?",
     answer:
-      "Yes — that's the point of the onboarding week. We interview you about how you talk to clients, pull real stories and expertise from your business, and write in that voice rather than generic templates. You approve everything before it's published.",
+      "Sometimes — but we don't sell it upfront. As part of your Snapshot walkthrough call, we'll discuss whether ongoing content, outreach, and reporting support makes sense for your business. There's no obligation, and no pitch before you've seen the value of the Snapshot itself.",
   },
   {
     question: "Where can I see real examples of your work?",
     answer:
-      "Check the Founder Credibility section above for our founder's own LinkedIn, and the Proof of Craft section for sample posts written in the style we'd use for your industry. Since we're a new agency, these are illustrative samples rather than published client case studies — we're transparent about that.",
+      "Check the Proof of Craft section above for sample posts written in the style we'd use for your industry. Since we're a new agency, these are illustrative samples rather than published client case studies — we're transparent about that.",
   },
 ]

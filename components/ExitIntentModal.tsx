@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, FileText } from "lucide-react"
+import { X, Sparkles } from "lucide-react"
 import { EmailCapture } from "@/components/EmailCapture"
-import { leadMagnet } from "@/lib/data"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
+import { leadMagnet, snapshotOffer } from "@/lib/data"
 
 export function ExitIntentModal() {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,12 +42,17 @@ export function ExitIntentModal() {
             <X className="w-5 h-5" />
           </button>
           <div className="w-16 h-16 rounded-full bg-se-orange/10 flex items-center justify-center mx-auto mb-4">
-            <FileText className="w-8 h-8 text-se-orange" />
+            <Sparkles className="w-8 h-8 text-se-orange" />
           </div>
           <h3 className="text-2xl font-bold mb-2 text-se-ink">Before You Go</h3>
           <p className="text-se-muted-text mb-5">
-            Grab the free {leadMagnet.title} — practical steps for showing up consistently, even
-            if you're not ready to book a call yet.
+            See exactly what&apos;s costing you leads on LinkedIn — get the {snapshotOffer.priceLabel}{" "}
+            {snapshotOffer.name} now.
+          </p>
+          <SnapshotCTAButton size="lg" className="w-full justify-center" />
+          <div className="text-xs text-se-muted-text uppercase tracking-wide my-5">or</div>
+          <p className="text-sm text-se-muted-text mb-3">
+            Not ready to buy? Grab the free {leadMagnet.title} instead.
           </p>
           <EmailCapture source="exit-intent-modal" />
           <button

@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
-import { services } from "@/lib/data"
+import { snapshotOffer, snapshotDeliverables } from "@/lib/data"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 
 export function Services() {
   return (
@@ -17,41 +17,34 @@ export function Services() {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            What&apos;s Included in Your <span className="text-se-orange">Retainer</span>
+            What&apos;s Included in Your{" "}
+            <span className="text-se-orange">{snapshotOffer.priceLabel} {snapshotOffer.name}</span>
           </h2>
-          <p className="text-se-muted-text">Four pillars, one monthly retainer, no add-on upsells.</p>
+          <p className="text-se-muted-text">{snapshotOffer.tagline}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.08 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full hover:border-se-orange/40 transition-all">
-                <CardHeader>
-                  <div className="w-11 h-11 rounded-lg bg-se-orange/10 flex items-center justify-center mb-2">
-                    <service.icon className="w-5 h-5 text-se-orange" />
-                  </div>
-                  <CardTitle className="text-xl text-se-ink">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-se-muted-text mb-4">{service.outcome}</p>
-                  <ul className="space-y-2">
-                    {service.details.map((detail, dIdx) => (
-                      <li key={dIdx} className="flex items-start gap-2 text-sm text-se-ink">
-                        <CheckCircle2 className="w-4 h-4 text-se-orange shrink-0 mt-0.5" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto bg-se-surface rounded-2xl border border-dashed border-se-border p-8 text-center"
+        >
+          <div className="w-11 h-11 rounded-lg bg-se-orange/10 flex items-center justify-center mx-auto mb-4">
+            <CheckCircle2 className="w-5 h-5 text-se-orange" />
+          </div>
+          <div className="text-sm font-semibold text-se-ink uppercase tracking-wide mb-2">
+            Exact Deliverables
+          </div>
+          <p className="text-se-muted-text">{snapshotDeliverables}</p>
+          <p className="text-xs text-se-muted-text mt-4">
+            Placeholder — replace with the final Snapshot scope, turnaround time, and delivery
+            format before launch.
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center mt-10">
+          <SnapshotCTAButton size="lg" />
         </div>
       </div>
     </section>

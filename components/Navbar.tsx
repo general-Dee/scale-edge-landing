@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
+import { snapshotOffer } from "@/lib/data"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -27,11 +28,10 @@ export function Navbar() {
           <span className="text-se-orange">Scale</span>
           <span>-Edge</span>
         </div>
-        <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
-          <a href="https://calendly.com/oshinowodare/30min" target="_blank" rel="noopener noreferrer">
-            Book a Call →
-          </a>
-        </Button>
+        <SnapshotCTAButton variant="outline" size="sm">
+          <span className="hidden sm:inline">Get Snapshot — {snapshotOffer.priceLabel}</span>
+          <span className="sm:hidden">Get Snapshot</span>
+        </SnapshotCTAButton>
       </div>
     </motion.header>
   )

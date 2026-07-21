@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import { CheckCircle2, PenLine, Send, Compass, BarChart3 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
+import { snapshotOffer } from "@/lib/data"
 
 const pillars = [
   { icon: PenLine, label: "Content & Ghostwriting" },
@@ -24,22 +25,23 @@ export function Solution() {
           >
             <div className="inline-flex items-center gap-2 bg-se-orange/10 px-4 py-2 rounded-full text-se-orange mb-6">
               <CheckCircle2 className="w-4 h-4" />
-              <span className="text-sm font-medium">The Scale-Edge Method</span>
+              <span className="text-sm font-medium">The {snapshotOffer.priceLabel} {snapshotOffer.name}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
-              A Full LinkedIn Engine — <span className="text-se-orange">Not Just Posts</span>
+              A Full Picture of Your LinkedIn Presence — <span className="text-se-orange">Not a Guess</span>
             </h2>
             <p className="text-se-muted-text text-lg mb-6">
-              Posting alone doesn&apos;t generate clients. We run content, outbound outreach,
-              strategy, and reporting together so your LinkedIn presence actually turns into
-              conversations with the people you want as clients.
+              Posting alone doesn&apos;t generate clients — and neither does guessing what to fix.
+              The {snapshotOffer.name} looks at your content, outbound approach, positioning, and
+              current results together, so you know exactly what&apos;s working and what&apos;s
+              costing you leads.
             </p>
             <ul className="space-y-3 mb-8">
               {[
-                "Content written in your voice, published on a consistent schedule",
-                "Direct outbound DMs to your ideal local prospects every week",
-                "A monthly strategy call to keep the plan sharp",
-                "Plain-English reporting so you know what's working",
+                "A single, one-time payment — no retainer, no subscription",
+                "Reviewed across content, outbound, positioning, and reporting",
+                "Delivered directly by the founder, not a junior account manager",
+                "A live walkthrough call to go over the findings together",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />
@@ -47,11 +49,7 @@ export function Solution() {
                 </li>
               ))}
             </ul>
-            <Button size="lg" asChild>
-              <a href="https://calendly.com/oshinowodare/30min" target="_blank" rel="noopener noreferrer">
-                Book a Call →
-              </a>
-            </Button>
+            <SnapshotCTAButton size="lg" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -61,7 +59,7 @@ export function Solution() {
             className="bg-se-surface rounded-3xl p-8 border border-se-border"
           >
             <div className="text-sm font-semibold text-se-muted-text uppercase tracking-wide mb-6">
-              The Four Pillars
+              What We Look At
             </div>
             <div className="space-y-4">
               {pillars.map((pillar, idx) => (

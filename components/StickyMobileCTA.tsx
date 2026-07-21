@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { PhoneCall } from "lucide-react"
+import { CreditCard } from "lucide-react"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
+import { snapshotOffer } from "@/lib/data"
 
 export function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,18 +36,12 @@ export function StickyMobileCTA() {
         >
           <div className="flex items-center gap-3">
             <div className="flex-1">
-              <div className="text-sm font-bold text-se-ink">Done-For-You LinkedIn Marketing</div>
+              <div className="text-sm font-bold text-se-ink">{snapshotOffer.name} — {snapshotOffer.priceLabel}</div>
             </div>
-            <Button
-              size="mobile"
-              className="flex items-center gap-2 shadow-lg w-auto"
-              asChild
-            >
-              <a href="https://calendly.com/oshinowodare/30min" target="_blank" rel="noopener noreferrer">
-                <PhoneCall className="w-4 h-4" />
-                Book a Call
-              </a>
-            </Button>
+            <SnapshotCTAButton size="mobile" className="flex items-center gap-2 shadow-lg w-auto">
+              <CreditCard className="w-4 h-4" />
+              Get Snapshot
+            </SnapshotCTAButton>
           </div>
         </motion.div>
       )}

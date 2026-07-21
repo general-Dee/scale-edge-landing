@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { Users } from "lucide-react"
+import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 
 export function Hero() {
   return (
@@ -24,16 +24,13 @@ export function Hero() {
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
             New agency, direct founder access — <span className="text-se-orange">no account managers, no juniors.</span>
           </p>
-          <Button size="lg" asChild>
-            <a href="https://calendly.com/oshinowodare/30min" target="_blank" rel="noopener noreferrer">
-              Book a Call →
-            </a>
-          </Button>
+          <SnapshotCTAButton size="lg" />
+          <p className="text-sm text-se-muted-text mt-3">One-time payment. Secure checkout. No subscription.</p>
           <a
             href="#email-capture"
             className="text-sm text-se-muted-text hover:text-se-orange mt-4 underline underline-offset-4"
           >
-            Not ready to talk? Get the free LinkedIn Content Checklist instead →
+            Not ready to buy? Get the free LinkedIn Content Checklist instead →
           </a>
           <div className="flex items-center gap-2 mt-10 text-sm text-se-muted-text">
             <Users className="w-4 h-4 text-se-orange" />
