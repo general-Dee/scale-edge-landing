@@ -1,8 +1,15 @@
-﻿"use client"
+"use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2, PenLine, Send, Compass, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const pillars = [
+  { icon: PenLine, label: "Content & Ghostwriting" },
+  { icon: Send, label: "Outbound & DM Lead Gen" },
+  { icon: Compass, label: "Strategy & Positioning" },
+  { icon: BarChart3, label: "Performance Reporting" },
+]
 
 export function Solution() {
   return (
@@ -10,54 +17,64 @@ export function Solution() {
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
             <div className="inline-flex items-center gap-2 bg-se-orange/10 px-4 py-2 rounded-full text-se-orange mb-6">
               <CheckCircle2 className="w-4 h-4" />
               <span className="text-sm font-medium">The Scale-Edge Method</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              We Don't Run Ads — We <span className="text-se-orange">Fix Funnels</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
+              A Full LinkedIn Engine — <span className="text-se-orange">Not Just Posts</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-6">
-              Your Meta traffic is already there. We rebuild your funnel from the ground up to capture, convince, and convert interruption-based visitors into booked calls.
+            <p className="text-se-muted-text text-lg mb-6">
+              Posting alone doesn&apos;t generate clients. We run content, outbound outreach,
+              strategy, and reporting together so your LinkedIn presence actually turns into
+              conversations with the people you want as clients.
             </p>
             <ul className="space-y-3 mb-8">
               {[
-                "Ad-to-page scent continuity (no click shock)",
-                "Mobile-thumb heatmap-optimized layouts",
-                "Urgency & social proof stacked above every CTA",
-                "Frictionless Calendly integration",
+                "Content written in your voice, published on a consistent schedule",
+                "Direct outbound DMs to your ideal local prospects every week",
+                "A monthly strategy call to keep the plan sharp",
+                "Plain-English reporting so you know what's working",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />
-                  <span>{item}</span>
+                  <span className="text-se-ink">{item}</span>
                 </li>
               ))}
             </ul>
             <Button size="lg" asChild>
               <a href="https://calendly.com/oshinowodare/30min" target="_blank" rel="noopener noreferrer">
-                Apply for Free Audit →
+                Book a Call →
               </a>
             </Button>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-se-orange/10 to-transparent rounded-3xl p-8 border border-white/10"
+            transition={{ duration: 0.5 }}
+            className="bg-se-surface rounded-3xl p-8 border border-se-border"
           >
-            <div className="text-6xl mb-4">📈</div>
-            <div className="text-3xl font-bold text-se-orange mb-2">+3.8×</div>
-            <div className="text-gray-300">Average ROAS lift for our clients within 14 days</div>
-            <div className="mt-6 h-2 bg-se-muted rounded-full overflow-hidden">
-              <div className="w-[78%] h-full bg-se-orange rounded-full" />
+            <div className="text-sm font-semibold text-se-muted-text uppercase tracking-wide mb-6">
+              The Four Pillars
             </div>
-            <div className="flex justify-between text-sm text-gray-500 mt-2">
-              <span>Before</span>
-              <span>After (14 days)</span>
+            <div className="space-y-4">
+              {pillars.map((pillar, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-4 bg-se-bg rounded-xl p-4 border border-se-border"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-se-orange/10 flex items-center justify-center shrink-0">
+                    <pillar.icon className="w-5 h-5 text-se-orange" />
+                  </div>
+                  <span className="font-medium text-se-ink">{pillar.label}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

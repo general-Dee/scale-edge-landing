@@ -10,11 +10,11 @@ const badgeVariants = cva(
         default:
           "border-transparent bg-se-orange text-white",
         secondary:
-          "border-transparent bg-se-muted text-gray-300",
+          "border-transparent bg-se-ink/5 text-se-muted-text",
         outline:
           "border-se-orange/50 text-se-orange",
-        urgent:
-          "border-transparent bg-red-600/20 text-red-400 animate-pulse-slow",
+        sample:
+          "border-transparent bg-se-orange text-white uppercase tracking-wide",
       },
     },
     defaultVariants: {

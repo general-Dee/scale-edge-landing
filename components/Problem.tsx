@@ -1,47 +1,46 @@
-﻿"use client"
+"use client"
 
 import { motion } from "framer-motion"
-import { AlertCircle, TrendingDown, XCircle } from "lucide-react"
+import { Clock, Users2, ThumbsUp } from "lucide-react"
 
 export function Problem() {
   return (
-    <section className="py-20 bg-se-gray/20">
+    <section className="py-20 bg-se-surface border-y border-se-border">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 bg-red-500/10 px-4 py-2 rounded-full text-red-400 mb-6">
-            <AlertCircle className="w-4 h-4" />
-            <span className="text-sm font-medium">The Hard Truth</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            You're Paying For Traffic That <span className="text-se-orange">Leaks Out</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
+            Referrals Alone <span className="text-se-orange">Don&apos;t Scale</span>
           </h2>
-          <p className="text-lg text-gray-300">
-            Every day, Meta sends you cold traffic — but your funnel isn't built for interruption-based buyers. Low intent? Short attention span? They bounce.
+          <p className="text-lg text-se-muted-text">
+            You know LinkedIn could bring in new clients. But between running the business and
+            serving the clients you already have, posting consistently keeps sliding to the bottom
+            of the list.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
-            { icon: TrendingDown, title: "80% Bounce Rate", desc: "Cold traffic leaves within 5 seconds if headline doesn't match ad promise." },
-            { icon: XCircle, title: "Forms Kill Momentum", desc: "Long forms on mobile = lost leads. You ask too much, too soon." },
-            { icon: AlertCircle, title: "No Trust = No Call", desc: "Social proof appears after the CTA — visitors get cold feet." },
+            { icon: Clock, title: "No Time to Post", desc: "Between clients, jobs, and cases, sitting down to write a post consistently just doesn't happen." },
+            { icon: Users2, title: "Referrals Only Go So Far", desc: "Word-of-mouth is great until it slows down — and you have no reliable way to fill the gap." },
+            { icon: ThumbsUp, title: "DIY Posts Get Likes, Not Leads", desc: "Occasional posts might get engagement from other business owners, but rarely turn into booked calls." },
           ].map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="bg-se-muted/50 rounded-2xl p-6 border border-white/5"
+              className="bg-se-bg rounded-2xl p-6 border border-se-border"
             >
-              <item.icon className="w-10 h-10 text-se-orange mb-4" />
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-400">{item.desc}</p>
+              <item.icon className="w-9 h-9 text-se-orange mb-4" />
+              <h3 className="text-xl font-bold mb-2 text-se-ink">{item.title}</h3>
+              <p className="text-se-muted-text">{item.desc}</p>
             </motion.div>
           ))}
         </div>

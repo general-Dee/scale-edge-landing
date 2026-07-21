@@ -1,21 +1,24 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const landingMetadata: Metadata = {
-  title: 'Scale-Edge | Fix Leaking Sales Funnels → Free Audit',
-  description: 'We fix leaking sales funnels so Meta ads convert. Book a free 30-min funnel audit. Most clients see 3.8x ROAS lift in 14 days.',
+  metadataBase: new URL('https://scale-edge.com'),
+  title: 'Scale-Edge | Done-For-You LinkedIn Marketing for Local Service Businesses',
+  description:
+    'Done-for-you LinkedIn content, outbound lead gen, and strategy for real estate agents, dentists, contractors, and law firms. Month-to-month, no long-term contract.',
   openGraph: {
-    title: 'Fix Your Leaking Sales Funnel (Free Audit)',
-    description: 'Stop losing Meta ad leads. Get a done-for-you funnel fix that converts cold traffic into booked calls.',
+    title: 'Done-For-You LinkedIn Marketing for Business Owners Who Don’t Have Time to Post',
+    description:
+      'Content, outbound DM lead gen, strategy, and reporting — built for real estate agents, dental practices, contractors, and law firms.',
     url: 'https://scale-edge.com',
     siteName: 'Scale-Edge Marketing LTD',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Scale-Edge Funnel Audit' }],
+    images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Scale-Edge Marketing LTD — Done-For-You LinkedIn Marketing' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fix Leaking Sales Funnels',
-    description: 'Free 30-min funnel audit. 120+ funnels fixed. 48hr go-live.',
-    images: ['/og-image.jpg'],
+    title: 'Done-For-You LinkedIn Marketing for Local Service Businesses',
+    description: 'Content, outbound lead gen, and strategy — month-to-month, no long-term contract.',
+    images: ['/og-image.svg'],
   },
   robots: { index: true, follow: true },
 }
@@ -24,5 +27,4 @@ export const landingMetadata: Metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }

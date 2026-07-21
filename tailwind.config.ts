@@ -1,4 +1,4 @@
-﻿import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   darkMode: ["class"],
@@ -11,22 +11,32 @@ const config: Config = {
     extend: {
       colors: {
         'se-orange': '#FF5C35',
-        'se-dark': '#0D0D0D',
-        'se-gray': '#1A1A1A',
-        'se-muted': '#2A2A2A',
+        // Light, professional B2B palette. Names kept for minimal diff even
+        // though these are no longer "dark" — se-bg is the page background,
+        // se-surface is card/section background, se-border is hairline borders,
+        // se-ink is primary text, se-muted-text is secondary text.
+        'se-bg': '#FAFAF9',
+        'se-surface': '#FFFFFF',
+        'se-border': '#E5E2DD',
+        'se-ink': '#1C1917',
+        'se-muted-text': '#57534E',
       },
       fontFamily: {
         sans: ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 1.5s ease-in-out infinite alternate',
-      },
       keyframes: {
-        glow: {
-          '0%': { boxShadow: '0 0 0 0 rgba(255, 92, 53, 0.4)' },
-          '100%': { boxShadow: '0 0 0 12px rgba(255, 92, 53, 0)' },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },

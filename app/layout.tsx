@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/utils/cn'
 import { landingMetadata, viewport as viewportConfig } from '@/lib/metadata'
+import { Analytics } from '@/components/Analytics'
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -21,8 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(plusJakarta.variable, "bg-se-dark text-white antialiased")}>
+      <body className={cn(plusJakarta.variable, "bg-se-bg text-se-ink antialiased")}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
