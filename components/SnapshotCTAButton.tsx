@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { cn } from "@/utils/cn"
 import { snapshotOffer } from "@/lib/data"
+import { trackConversion } from "@/lib/analytics"
 
 // Stripe Payment Link for the Growth Snapshot. Set NEXT_PUBLIC_SNAPSHOT_PAYMENT_LINK_URL
 // in .env.local once the Stripe account + Payment Link exist. Until then, every CTA
@@ -10,6 +11,7 @@ const PAYMENT_LINK_URL = process.env.NEXT_PUBLIC_SNAPSHOT_PAYMENT_LINK_URL
 
 interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | "className"> {
   children?: ReactNode
+  location?: string
 }
 
 /**
@@ -18,7 +20,7 @@ interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | 
  * clearly-labeled disabled "coming soon" button (with tooltip) when it isn't —
  * never a silent `#` link or a 404.
  */
-export function SnapshotCTAButton({ children, size = "lg", variant, className }: SnapshotCTAButtonProps) {
+export function SnapshotCTAButton({ children, size = "lg", variant, className, location = "unknown" }: SnapshotCTAButtonProps) {
   const content = children ?? `Get Your ${snapshotOffer.priceLabel} Growth Snapshot →`
 
   if (!PAYMENT_LINK_URL) {
@@ -39,7 +41,12 @@ export function SnapshotCTAButton({ children, size = "lg", variant, className }:
 
   return (
     <Button size={size} variant={variant} className={className} asChild>
-      <a href={PAYMENT_LINK_URL} target="_blank" rel="noopener noreferrer">
+      <a
+        href={PAYMENT_LINK_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackConversion("snapshot_cta_click", { location })}
+      >
         {content}
       </a>
     </Button>

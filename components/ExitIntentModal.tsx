@@ -49,7 +49,7 @@ export function ExitIntentModal() {
             See exactly what&apos;s costing you leads on LinkedIn — get the {snapshotOffer.priceLabel}{" "}
             {snapshotOffer.name} now.
           </p>
-          <SnapshotCTAButton size="lg" className="w-full justify-center" />
+          <SnapshotCTAButton size="lg" className="w-full justify-center" location="exit-intent-modal" />
           <div className="text-xs text-se-muted-text uppercase tracking-wide my-5">or</div>
           <p className="text-sm text-se-muted-text mb-3">
             Not ready to buy? Grab the free {leadMagnet.title} instead.

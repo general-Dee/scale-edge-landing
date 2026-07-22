@@ -38,7 +38,7 @@ export function StickyMobileCTA() {
             <div className="flex-1">
               <div className="text-sm font-bold text-se-ink">{snapshotOffer.name} — {snapshotOffer.priceLabel}</div>
             </div>
-            <SnapshotCTAButton size="mobile" className="flex items-center gap-2 shadow-lg w-auto">
+            <SnapshotCTAButton size="mobile" className="flex items-center gap-2 shadow-lg w-auto" location="sticky-mobile">
               <CreditCard className="w-4 h-4" />
               Get Snapshot
             </SnapshotCTAButton>

@@ -49,7 +49,7 @@ export function Solution() {
                 </li>
               ))}
             </ul>
-            <SnapshotCTAButton size="lg" />
+            <SnapshotCTAButton size="lg" location="solution" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}

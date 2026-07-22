@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Loader2 } from "lucide-react"
 import { leadMagnet } from "@/lib/data"
+import { trackConversion } from "@/lib/analytics"
 
 interface EmailCaptureProps {
   source: string
@@ -38,6 +39,7 @@ export function EmailCapture({ source, className = "", compact = false }: EmailC
       }
 
       setStatus("success")
+      trackConversion("lead_capture", { source })
     } catch {
       setStatus("error")
       setErrorMessage("Something went wrong. Please try again.")

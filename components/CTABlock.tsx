@@ -28,7 +28,7 @@ export function CTABlock() {
             for {snapshotOffer.priceLabel} — and decide from there whether more support makes sense.
           </p>
           <div className="flex flex-col items-center gap-4">
-            <SnapshotCTAButton size="lg" />
+            <SnapshotCTAButton size="lg" location="cta-block" />
             <a href="#email-capture" className="text-sm text-se-muted-text underline underline-offset-4 hover:text-se-orange">
               Not ready to buy yet? Get the free LinkedIn Content Checklist instead →
             </a>

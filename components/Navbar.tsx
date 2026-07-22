@@ -28,7 +28,7 @@ export function Navbar() {
           <span className="text-se-orange">Scale</span>
           <span>-Edge</span>
         </div>
-        <SnapshotCTAButton variant="outline" size="sm">
+        <SnapshotCTAButton variant="outline" size="sm" location="navbar">
           <span className="hidden sm:inline">Get Snapshot — {snapshotOffer.priceLabel}</span>
           <span className="sm:hidden">Get Snapshot</span>
         </SnapshotCTAButton>

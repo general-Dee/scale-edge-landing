@@ -24,7 +24,7 @@ export function Hero() {
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
             New agency, direct founder access — <span className="text-se-orange">no account managers, no juniors.</span>
           </p>
-          <SnapshotCTAButton size="lg" />
+          <SnapshotCTAButton size="lg" location="hero" />
           <p className="text-sm text-se-muted-text mt-3">One-time payment. Secure checkout. No subscription.</p>
           <a
             href="#email-capture"

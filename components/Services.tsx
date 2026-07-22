@@ -44,7 +44,7 @@ export function Services() {
         </motion.div>
 
         <div className="flex justify-center mt-10">
-          <SnapshotCTAButton size="lg" />
+          <SnapshotCTAButton size="lg" location="services" />
         </div>
       </div>
     </section>

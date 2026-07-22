@@ -40,7 +40,7 @@ export function GuaranteeRiskReversal() {
               <ShieldCheck className="w-4 h-4 text-se-orange" /> No cold sales pitch
             </span>
           </div>
-          <SnapshotCTAButton size="lg" />
+          <SnapshotCTAButton size="lg" location="guarantee" />
           <p className="text-sm text-se-muted-text mt-3">
             Not ready yet?{" "}
             <a href="#email-capture" className="text-se-orange underline underline-offset-4">
