@@ -1,21 +1,13 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { Tag, CheckCircle } from "lucide-react"
 import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 import { snapshotOffer } from "@/lib/data"
+import { FadeIn } from "@/components/FadeIn"
 
 export function CTABlock() {
   return (
     <section className="py-20 border-y border-se-border bg-se-surface">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <FadeIn className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-se-orange/10 px-4 py-2 rounded-full text-se-orange mb-6">
             <Tag className="w-4 h-4" />
             <span className="text-sm font-medium">{snapshotOffer.priceLabel} One-Time</span>
@@ -38,7 +30,7 @@ export function CTABlock() {
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> No subscription</span>
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> Personal walkthrough call</span>
           </div>
-        </motion.div>
+        </FadeIn>
       </div>
     </section>
   )

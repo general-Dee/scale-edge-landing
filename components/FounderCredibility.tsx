@@ -1,20 +1,12 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { User, Linkedin } from "lucide-react"
 import { founderBio } from "@/lib/data"
+import { FadeIn } from "@/components/FadeIn"
 
 export function FounderCredibility() {
   return (
     <section id="founder-credibility" className="py-20 bg-se-surface border-y border-se-border">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
-        >
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
             See the Exact Kind of Content We Write
           </h2>
@@ -40,7 +32,7 @@ export function FounderCredibility() {
               Placeholder — replace with the founder&apos;s real name, photo, and LinkedIn profile URL before launch.
             </p>
           </div>
-        </motion.div>
+        </FadeIn>
       </div>
     </section>
   )

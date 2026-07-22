@@ -1,9 +1,7 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { CheckCircle2, PenLine, Send, Compass, BarChart3 } from "lucide-react"
 import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 import { snapshotOffer } from "@/lib/data"
+import { FadeIn } from "@/components/FadeIn"
 
 const pillars = [
   { icon: PenLine, label: "Content & Ghostwriting" },
@@ -17,12 +15,7 @@ export function Solution() {
     <section className="py-20">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <FadeIn>
             <div className="inline-flex items-center gap-2 bg-se-orange/10 px-4 py-2 rounded-full text-se-orange mb-6">
               <CheckCircle2 className="w-4 h-4" />
               <span className="text-sm font-medium">The {snapshotOffer.priceLabel} {snapshotOffer.name}</span>
@@ -50,14 +43,8 @@ export function Solution() {
               ))}
             </ul>
             <SnapshotCTAButton size="lg" location="solution" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-se-surface rounded-3xl p-8 border border-se-border"
-          >
+          </FadeIn>
+          <FadeIn className="bg-se-surface rounded-3xl p-8 border border-se-border">
             <div className="text-sm font-semibold text-se-muted-text uppercase tracking-wide mb-6">
               What We Look At
             </div>
@@ -74,7 +61,7 @@ export function Solution() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </FadeIn>
         </div>
       </div>
     </section>

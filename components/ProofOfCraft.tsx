@@ -1,21 +1,13 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { User, ThumbsUp, MessageCircle, Repeat2 } from "lucide-react"
 import { samplePosts } from "@/lib/data"
+import { FadeIn } from "@/components/FadeIn"
 
 export function ProofOfCraft() {
   return (
     <section className="py-20">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-12"
-        >
+        <FadeIn className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
             Proof of <span className="text-se-orange">Craft</span>
           </h2>
@@ -23,16 +15,13 @@ export function ProofOfCraft() {
             We&apos;re a new agency without a shelf of client case studies yet — so here&apos;s the writing
             itself. Sample posts illustrating our approach for a few of the industries we serve.
           </p>
-        </motion.div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-6">
           {samplePosts.map((post, idx) => (
-            <motion.div
+            <FadeIn
               key={post.id}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
+              delay={idx * 0.1}
               className="bg-se-surface rounded-2xl border border-se-border overflow-hidden flex flex-col"
             >
               <div className="p-4 border-b border-se-border">
@@ -56,7 +45,7 @@ export function ProofOfCraft() {
                   <span className="flex items-center gap-1"><Repeat2 className="w-3.5 h-3.5" /> Repost</span>
                 </div>
               </div>
-            </motion.div>
+            </FadeIn>
           ))}
         </div>
 

@@ -1,17 +1,14 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { Users } from "lucide-react"
 import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
+import { FadeIn } from "@/components/FadeIn"
 
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+        <FadeIn
+          trigger="mount"
+          duration={0.6}
           className="flex flex-col items-center text-center max-w-3xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6 text-se-ink">
@@ -36,7 +33,7 @@ export function Hero() {
             <Users className="w-4 h-4 text-se-orange" />
             <span>Built for local, service-based businesses — not another DTC ad agency.</span>
           </div>
-        </motion.div>
+        </FadeIn>
       </div>
     </section>
   )

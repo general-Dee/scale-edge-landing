@@ -1,35 +1,24 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { processSteps, processIcons } from "@/lib/data"
+import { FadeIn } from "@/components/FadeIn"
 
 export function Process() {
   return (
     <section className="py-20 bg-se-surface border-y border-se-border">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-12"
-        >
+        <FadeIn className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
             Here&apos;s What Happens <span className="text-se-orange">After You Buy</span>
           </h2>
           <p className="text-se-muted-text">No sales call required to start — just a clear, one-time path from purchase to your walkthrough call.</p>
-        </motion.div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-4 gap-6 relative">
           {processSteps.map((step, idx) => {
             const Icon = processIcons[idx]
             return (
-              <motion.div
+              <FadeIn
                 key={step.step}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                viewport={{ once: true }}
+                delay={idx * 0.08}
                 className="relative z-10"
               >
                 <div className="bg-se-bg rounded-2xl p-6 text-center border border-se-border h-full">
@@ -43,7 +32,7 @@ export function Process() {
                 {idx < processSteps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-se-orange/30 -translate-y-1/2 z-0" />
                 )}
-              </motion.div>
+              </FadeIn>
             )
           })}
         </div>
