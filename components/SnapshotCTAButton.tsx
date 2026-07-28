@@ -6,10 +6,10 @@ import { cn } from "@/utils/cn"
 import { snapshotOffer } from "@/lib/data"
 import { trackConversion } from "@/lib/analytics"
 
-// Stripe Payment Link for the Growth Snapshot. Set NEXT_PUBLIC_SNAPSHOT_PAYMENT_LINK_URL
+// Stripe Payment Link for the Growth Snapshot. Set NEXT_PUBLIC_STRIPE_GROWTH_SNAPSHOT_LINK
 // in .env.local once the Stripe account + Payment Link exist. Until then, every CTA
 // using this component renders a disabled "coming soon" state instead of a dead link.
-const PAYMENT_LINK_URL = process.env.NEXT_PUBLIC_SNAPSHOT_PAYMENT_LINK_URL
+const PAYMENT_LINK_URL = process.env.NEXT_PUBLIC_STRIPE_GROWTH_SNAPSHOT_LINK
 
 interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | "className"> {
   children?: ReactNode
