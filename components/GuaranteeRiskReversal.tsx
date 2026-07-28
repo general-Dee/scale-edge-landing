@@ -33,12 +33,6 @@ export function GuaranteeRiskReversal() {
             </span>
           </div>
           <SnapshotCTAButton size="lg" location="guarantee" />
-          <p className="text-sm text-se-muted-text mt-3">
-            Not ready yet?{" "}
-            <a href="#email-capture" className="text-se-orange underline underline-offset-4">
-              Get the free LinkedIn Content Checklist instead →
-            </a>
-          </p>
         </FadeIn>
       </div>
     </section>

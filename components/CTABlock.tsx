@@ -21,9 +21,6 @@ export function CTABlock() {
           </p>
           <div className="flex flex-col items-center gap-4">
             <SnapshotCTAButton size="lg" location="cta-block" />
-            <a href="#email-capture" className="text-sm text-se-muted-text underline underline-offset-4 hover:text-se-orange">
-              Not ready to buy yet? Get the free LinkedIn Content Checklist instead →
-            </a>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-se-muted-text">
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> One-time payment</span>

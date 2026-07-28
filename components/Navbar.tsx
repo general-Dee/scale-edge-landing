@@ -1,27 +1,29 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
 import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 import { snapshotOffer } from "@/lib/data"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    const raf = requestAnimationFrame(() => setMounted(true))
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      cancelAnimationFrame(raf)
+    }
   }, [])
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out motion-reduce:transition-none ${
         scrolled ? "bg-se-bg/90 backdrop-blur-md border-b border-se-border" : "bg-transparent"
       }`}
+      style={{ transform: mounted ? "translateY(0)" : "translateY(-100%)" }}
     >
       <div className="container-custom flex items-center justify-between py-4">
         <div className="text-xl font-bold tracking-tight text-se-ink">
@@ -33,6 +35,6 @@ export function Navbar() {
           <span className="sm:hidden">Get Snapshot</span>
         </SnapshotCTAButton>
       </div>
-    </motion.header>
+    </header>
   )
 }
