@@ -36,10 +36,9 @@ export async function POST(request: Request) {
   // Until both ConvertKit env vars are set, fall back to logging only so
   // local dev and pre-launch testing never breaks.
   if (!apiKey || !formId) {
-    console.log("[lead] new LinkedIn Content Checklist signup", {
+    console.log(`[lead] new signup (source: ${source ?? "unknown"})`, {
       email,
       name: name ?? null,
-      source: source ?? "unknown",
       receivedAt: new Date().toISOString(),
     })
 

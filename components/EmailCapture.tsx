@@ -10,11 +10,21 @@ interface EmailCaptureProps {
   source: string
   className?: string
   compact?: boolean
+  submitLabel?: string
+  successMessage?: string
+  privacyNote?: string
 }
 
 type Status = "idle" | "submitting" | "success" | "error"
 
-export function EmailCapture({ source, className = "", compact = false }: EmailCaptureProps) {
+export function EmailCapture({
+  source,
+  className = "",
+  compact = false,
+  submitLabel = "Get the Checklist",
+  successMessage = "Check your inbox — the checklist is on its way.",
+  privacyNote = leadMagnet.privacyNote,
+}: EmailCaptureProps) {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<Status>("idle")
   const [errorMessage, setErrorMessage] = useState("")
@@ -50,7 +60,7 @@ export function EmailCapture({ source, className = "", compact = false }: EmailC
     return (
       <div className={`flex items-center gap-2 text-se-ink font-medium ${className}`}>
         <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />
-        <span>Check your inbox — the checklist is on its way.</span>
+        <span>{successMessage}</span>
       </div>
     )
   }
@@ -77,14 +87,14 @@ export function EmailCapture({ source, className = "", compact = false }: EmailC
               <Loader2 className="w-4 h-4 animate-spin" /> Sending...
             </span>
           ) : (
-            "Get the Checklist"
+            submitLabel
           )}
         </Button>
       </form>
       {status === "error" && (
         <p className="text-sm text-red-600 mt-2">{errorMessage}</p>
       )}
-      <p className="text-xs text-se-muted-text mt-2">{leadMagnet.privacyNote}</p>
+      <p className="text-xs text-se-muted-text mt-2">{privacyNote}</p>
     </div>
   )
 }

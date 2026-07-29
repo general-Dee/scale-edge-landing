@@ -7,6 +7,10 @@ import {
   UserCheck,
   Rocket,
   LineChart,
+  Search,
+  Hammer,
+  Rss,
+  BarChart3,
   type LucideIcon,
 } from "lucide-react"
 
@@ -19,6 +23,11 @@ export interface SnapshotOffer {
   name: string
   price: number
   priceLabel: string
+  tagline: string
+}
+
+export interface RetainerOffer {
+  name: string
   tagline: string
 }
 
@@ -169,5 +178,65 @@ export const faqs: FaqItem[] = [
     question: "Where can I see real examples of your work?",
     answer:
       "Check the Proof of Craft section above for sample posts written in the style we'd use for your industry. Since we're a new agency, these are illustrative samples rather than published client case studies — we're transparent about that.",
+  },
+]
+
+// Digital Funnel Engineering — an ongoing retainer/service offer, standalone from
+// the Growth Snapshot above. No price field: scope and investment are discussed
+// on the call, not sold off a fixed sticker price.
+export const funnelEngineeringOffer: RetainerOffer = {
+  name: "Digital Funnel Engineering",
+  tagline:
+    "An ongoing, done-for-you build-and-run engagement for local service businesses who want a real lead funnel — not just more posts — behind their LinkedIn presence: the pages, the follow-up, and the reporting that turns visibility into booked calls.",
+}
+
+// Funnel Engineering deliverables — placeholder, owner must define exact scope
+// before launch. Follows the same TBD pattern as `snapshotDeliverables` above:
+// render this verbatim wherever the engagement's contents are described, so
+// it's obviously unfinished rather than invented marketing copy.
+export const funnelEngineeringDeliverables =
+  "[FUNNEL ENGINEERING DELIVERABLES — TBD: list what's included each month, e.g. landing pages / nurture sequences / reporting cadence, plus what's custom-built vs. templated]"
+
+// Engagement stages — process narrative, not unapproved facts, so these are
+// written out in full rather than left as TBD placeholders.
+export const funnelEngineeringStages: ProcessStep[] = [
+  { step: 1, title: "Discovery", description: "A working session to map your current funnel — where leads come from today, where they stall, and what a working system needs to look like for your business." },
+  { step: 2, title: "Build", description: funnelEngineeringDeliverables },
+  { step: 3, title: "Launch", description: "We turn the new funnel on end-to-end — pages, follow-up sequences, and tracking live together, not shipped piecemeal." },
+  { step: 4, title: "Optimize & Report", description: "Ongoing review of what's converting and what isn't, with regular reporting so you always know where leads are coming from and what we're changing next." },
+]
+
+export const funnelEngineeringIcons = [Search, Hammer, Rocket, BarChart3]
+
+// Funnel Engineering pricing — placeholder, owner must define retainer
+// structure before launch. No tiers or numbers invented here.
+export const funnelEngineeringPricingNote =
+  "[INVESTMENT — TBD: retainer pricing depends on scope, discussed on the call]"
+
+export const funnelEngineeringFaqs: FaqItem[] = [
+  {
+    question: "How long is the contract?",
+    answer:
+      "[CONTRACT LENGTH — TBD: minimum term and renewal/cancellation terms to be defined before launch]",
+  },
+  {
+    question: "Can I cancel if it's not working out?",
+    answer:
+      "[CANCELLATION POLICY — TBD: notice period and process to be defined before launch]",
+  },
+  {
+    question: "How is this different from a one-off project?",
+    answer:
+      "This is an ongoing, managed engagement rather than a single deliverable handed off once. We build the funnel, keep it running, and adjust it on a regular cadence as we see what's actually converting — instead of a fixed-scope project that ends at delivery.",
+  },
+  {
+    question: "How does billing work?",
+    answer:
+      "[BILLING TERMS — TBD: billing frequency and payment method to be defined before launch]",
+  },
+  {
+    question: "What do you need from me to get started?",
+    answer:
+      "Mainly your time for the Discovery session — after that, most of the build and setup work happens on our end, with check-ins as we go rather than a heavy weekly workload on you.",
   },
 ]
