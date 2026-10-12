@@ -7,18 +7,18 @@ export function Problem() {
       <div className="container-custom">
         <FadeIn className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
-            WhatsApp and Paper <span className="text-se-orange">Don't Scale</span>
+            Broken Operations Are an <span className="text-se-orange">Expensive Everyday Problem</span>
           </h2>
           <p className="text-lg text-se-muted-text">
-            Orders get lost. Stock is unclear. Parents miss updates. Inquiries pile up. Running the business manually costs you time and money every day.
+            Lost orders. Unclear stock. Staff chasing WhatsApp. No clear picture of the day. In the real economy these frictions cost money every single day.
           </p>
         </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
-            { icon: Clock, title: "Lost Time & Orders", desc: "Chasing messages, updating stock by hand, and missing sales because nothing is organised." },
-            { icon: Users2, title: "Staff & Customer Friction", desc: "Customers can't order easily. Staff waste time on repetitive tasks instead of serving people." },
-            { icon: AlertCircle, title: "No Clear Picture", desc: "You don't know today's sales, stock levels, or which inquiries need follow-up until it's too late." },
+            { icon: Clock, title: "Lost Sales & Time", desc: "Orders and inquiries disappear in chat. Time spent chasing instead of serving." },
+            { icon: Users2, title: "Friction for Everyone", desc: "Customers struggle to order. Staff waste effort on repetitive manual work." },
+            { icon: AlertCircle, title: "No Leverage", desc: "You stay stuck trading time for money because nothing runs without constant attention." },
           ].map((item, idx) => (
             <FadeIn
               key={idx}
