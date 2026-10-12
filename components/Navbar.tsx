@@ -31,8 +31,8 @@ export function Navbar() {
           <span>-Edge</span>
         </div>
         <SnapshotCTAButton variant="outline" size="sm" location="navbar">
-          <span className="hidden sm:inline">Get Snapshot — {snapshotOffer.priceLabel}</span>
-          <span className="sm:hidden">Get Snapshot</span>
+          <span className="hidden sm:inline">Book Discovery — {snapshotOffer.priceLabel} setup</span>
+          <span className="sm:hidden">Get Started</span>
         </SnapshotCTAButton>
       </div>
     </header>
