@@ -4,10 +4,10 @@ import { snapshotOffer } from "@/lib/data"
 import { FadeIn } from "@/components/FadeIn"
 
 const pillars = [
-  { icon: ShoppingCart, label: "Customer Ordering / Inquiry" },
-  { icon: Users, label: "Staff Dashboard & Till" },
+  { icon: ShoppingCart, label: "Customer Ordering (fast)" },
+  { icon: Users, label: "Staff Dashboard (simple)" },
   { icon: Bell, label: "WhatsApp Alerts" },
-  { icon: BarChart3, label: "Daily Reports & Stock" },
+  { icon: BarChart3, label: "Daily Visibility" },
 ]
 
 export function Solution() {
@@ -21,18 +21,17 @@ export function Solution() {
               <span className="text-sm font-medium">The {snapshotOffer.name}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
-              A System That Handles Daily Operations — <span className="text-se-orange">Not Just a Website</span>
+              A System That Improves Everyone’s Position — <span className="text-se-orange">Fast</span>
             </h2>
             <p className="text-se-muted-text text-lg mb-6">
-              Customers place orders or inquiries. Staff manage stock, till, and production. You get reports and WhatsApp alerts.
-              Setup once, then a monthly retainer keeps everything running and supported.
+              Dream outcome: orders stop getting lost and operations run without constant chasing. Likelihood is high because we’ve already built these systems for local businesses. Time to first win is days, not months. Effort is low — we handle setup and the retainer keeps it running.
             </p>
             <ul className="space-y-3 mb-8">
               {[
-                "Customer side for ordering or inquiries (web + mobile friendly)",
-                "Staff dashboard for daily operations",
-                "WhatsApp integration for alerts and updates",
-                "Monthly retainer for hosting, updates, and support",
+                "Customer side that makes ordering or inquiring easy",
+                "Staff dashboard that removes daily friction",
+                "WhatsApp alerts so nothing falls through",
+                "Monthly retainer so the system stays core to operations",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />
@@ -44,7 +43,7 @@ export function Solution() {
           </FadeIn>
           <FadeIn className="bg-se-surface rounded-3xl p-8 border border-se-border">
             <div className="text-sm font-semibold text-se-muted-text uppercase tracking-wide mb-6">
-              What the System Covers
+              What Changes Immediately
             </div>
             <div className="space-y-4">
               {pillars.map((pillar, idx) => (
