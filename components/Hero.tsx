@@ -12,26 +12,26 @@ export function Hero() {
           className="flex flex-col items-center text-center max-w-3xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6 text-se-ink">
-            Digital Systems That Run Your Business Every Day
+            Stop Losing Orders to WhatsApp Chaos
           </h1>
           <p className="text-lg md:text-xl text-se-muted-text mb-6 max-w-2xl leading-relaxed">
-            Ready web + mobile systems for Nigerian shops, schools, furniture sellers, and real estate agencies.
-            Customers order or inquire. Staff manage everything. You get steady operations without the chaos.
+            A done-for-you operational system for Nigerian shops, schools and sellers. Customers order. Staff manage stock and till. You get daily visibility.
+            Live in days, not months.
           </p>
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
-            Setup + monthly retainer — <span className="text-se-orange">so the system stays running and supported.</span>
+            Setup + monthly retainer — <span className="text-se-orange">skills create the cash flow, the system creates the scale.</span>
           </p>
           <SnapshotCTAButton size="lg" location="hero" />
-          <p className="text-sm text-se-muted-text mt-3">Start with a discovery call. No long contracts.</p>
+          <p className="text-sm text-se-muted-text mt-3">Discovery call first. Proof from systems already built for local businesses.</p>
           <a
             href="#email-capture"
             className="text-sm text-se-muted-text hover:text-se-orange mt-4 underline underline-offset-4"
           >
-            Not ready? Get the free readiness checklist →
+            Not ready? Get the free chaos checklist →
           </a>
           <div className="flex items-center gap-2 mt-10 text-sm text-se-muted-text">
             <Users className="w-4 h-4 text-se-orange" />
-            <span>Built for local Nigerian businesses that need daily operational systems.</span>
+            <span>Built for the real economy — where broken daily processes cost real money.</span>
           </div>
         </FadeIn>
       </div>
