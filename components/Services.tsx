@@ -9,7 +9,7 @@ export function Services() {
       <div className="container-custom">
         <FadeIn className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            What's Included in Your{" "}
+            What You Get With the{" "}
             <span className="text-se-orange">{snapshotOffer.name}</span>
           </h2>
           <p className="text-se-muted-text">{snapshotOffer.tagline}</p>
@@ -24,7 +24,7 @@ export function Services() {
           </div>
           <p className="text-se-muted-text">{snapshotDeliverables}</p>
           <p className="text-xs text-se-muted-text mt-4">
-            Pricing starts at {snapshotOffer.priceLabel} setup + monthly retainer. Exact package confirmed on discovery call.
+            Starts at {snapshotOffer.priceLabel} setup + monthly retainer. Unique, expensive enough to be sticky, and proven on local systems.
           </p>
         </FadeIn>
 
