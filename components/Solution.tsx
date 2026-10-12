@@ -1,13 +1,13 @@
-import { CheckCircle2, PenLine, Send, Compass, BarChart3 } from "lucide-react"
+import { CheckCircle2, ShoppingCart, Users, Bell, BarChart3 } from "lucide-react"
 import { SnapshotCTAButton } from "@/components/SnapshotCTAButton"
 import { snapshotOffer } from "@/lib/data"
 import { FadeIn } from "@/components/FadeIn"
 
 const pillars = [
-  { icon: PenLine, label: "Content & Ghostwriting" },
-  { icon: Send, label: "Outbound & DM Lead Gen" },
-  { icon: Compass, label: "Strategy & Positioning" },
-  { icon: BarChart3, label: "Performance Reporting" },
+  { icon: ShoppingCart, label: "Customer Ordering / Inquiry" },
+  { icon: Users, label: "Staff Dashboard & Till" },
+  { icon: Bell, label: "WhatsApp Alerts" },
+  { icon: BarChart3, label: "Daily Reports & Stock" },
 ]
 
 export function Solution() {
@@ -18,23 +18,21 @@ export function Solution() {
           <FadeIn>
             <div className="inline-flex items-center gap-2 bg-se-orange/10 px-4 py-2 rounded-full text-se-orange mb-6">
               <CheckCircle2 className="w-4 h-4" />
-              <span className="text-sm font-medium">The {snapshotOffer.priceLabel} {snapshotOffer.name}</span>
+              <span className="text-sm font-medium">The {snapshotOffer.name}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
-              A Full Picture of Your LinkedIn Presence — <span className="text-se-orange">Not a Guess</span>
+              A System That Handles Daily Operations — <span className="text-se-orange">Not Just a Website</span>
             </h2>
             <p className="text-se-muted-text text-lg mb-6">
-              Posting alone doesn&apos;t generate clients — and neither does guessing what to fix.
-              The {snapshotOffer.name} looks at your content, outbound approach, positioning, and
-              current results together, so you know exactly what&apos;s working and what&apos;s
-              costing you leads.
+              Customers place orders or inquiries. Staff manage stock, till, and production. You get reports and WhatsApp alerts.
+              Setup once, then a monthly retainer keeps everything running and supported.
             </p>
             <ul className="space-y-3 mb-8">
               {[
-                "A single, one-time payment — no retainer, no subscription",
-                "Reviewed across content, outbound, positioning, and reporting",
-                "Delivered directly by the founder, not a junior account manager",
-                "A live walkthrough call to go over the findings together",
+                "Customer side for ordering or inquiries (web + mobile friendly)",
+                "Staff dashboard for daily operations",
+                "WhatsApp integration for alerts and updates",
+                "Monthly retainer for hosting, updates, and support",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />
@@ -46,7 +44,7 @@ export function Solution() {
           </FadeIn>
           <FadeIn className="bg-se-surface rounded-3xl p-8 border border-se-border">
             <div className="text-sm font-semibold text-se-muted-text uppercase tracking-wide mb-6">
-              What We Look At
+              What the System Covers
             </div>
             <div className="space-y-4">
               {pillars.map((pillar, idx) => (
