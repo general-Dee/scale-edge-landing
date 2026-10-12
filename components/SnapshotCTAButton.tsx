@@ -6,9 +6,8 @@ import { cn } from "@/utils/cn"
 import { snapshotOffer } from "@/lib/data"
 import { trackConversion } from "@/lib/analytics"
 
-// Temporary: point to WhatsApp or form until Stripe/booking link is live.
-// Replace with actual discovery booking link (Calendly, WhatsApp, or form) when ready.
-const DISCOVERY_LINK = process.env.NEXT_PUBLIC_DISCOVERY_LINK || "https://wa.me/2348086655000?text=Hi%2C%20I%20want%20to%20discuss%20a%20business%20system%20setup"
+// WhatsApp discovery link. Override with NEXT_PUBLIC_DISCOVERY_LINK if needed.
+const DISCOVERY_LINK = process.env.NEXT_PUBLIC_DISCOVERY_LINK || "https://wa.me/2348165510842?text=Hi%2C%20I%20want%20to%20discuss%20a%20business%20system%20setup"
 
 interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | "className"> {
   children?: ReactNode
