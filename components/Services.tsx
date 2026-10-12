@@ -9,8 +9,8 @@ export function Services() {
       <div className="container-custom">
         <FadeIn className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            What&apos;s Included in Your{" "}
-            <span className="text-se-orange">{snapshotOffer.priceLabel} {snapshotOffer.name}</span>
+            What's Included in Your{" "}
+            <span className="text-se-orange">{snapshotOffer.name}</span>
           </h2>
           <p className="text-se-muted-text">{snapshotOffer.tagline}</p>
         </FadeIn>
@@ -24,8 +24,7 @@ export function Services() {
           </div>
           <p className="text-se-muted-text">{snapshotDeliverables}</p>
           <p className="text-xs text-se-muted-text mt-4">
-            Placeholder — replace with the final Snapshot scope, turnaround time, and delivery
-            format before launch.
+            Pricing starts at {snapshotOffer.priceLabel} setup + monthly retainer. Exact package confirmed on discovery call.
           </p>
         </FadeIn>
 
