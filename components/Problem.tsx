@@ -1,4 +1,4 @@
-import { Clock, Users2, ThumbsUp } from "lucide-react"
+import { Clock, Users2, AlertCircle } from "lucide-react"
 import { FadeIn } from "@/components/FadeIn"
 
 export function Problem() {
@@ -7,20 +7,18 @@ export function Problem() {
       <div className="container-custom">
         <FadeIn className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-se-ink">
-            Referrals Alone <span className="text-se-orange">Don&apos;t Scale</span>
+            WhatsApp and Paper <span className="text-se-orange">Don't Scale</span>
           </h2>
           <p className="text-lg text-se-muted-text">
-            You know LinkedIn could bring in new clients. But between running the business and
-            serving the clients you already have, posting consistently keeps sliding to the bottom
-            of the list.
+            Orders get lost. Stock is unclear. Parents miss updates. Inquiries pile up. Running the business manually costs you time and money every day.
           </p>
         </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
-            { icon: Clock, title: "No Time to Post", desc: "Between clients, jobs, and cases, sitting down to write a post consistently just doesn't happen." },
-            { icon: Users2, title: "Referrals Only Go So Far", desc: "Word-of-mouth is great until it slows down — and you have no reliable way to fill the gap." },
-            { icon: ThumbsUp, title: "DIY Posts Get Likes, Not Leads", desc: "Occasional posts might get engagement from other business owners, but rarely turn into booked calls." },
+            { icon: Clock, title: "Lost Time & Orders", desc: "Chasing messages, updating stock by hand, and missing sales because nothing is organised." },
+            { icon: Users2, title: "Staff & Customer Friction", desc: "Customers can't order easily. Staff waste time on repetitive tasks instead of serving people." },
+            { icon: AlertCircle, title: "No Clear Picture", desc: "You don't know today's sales, stock levels, or which inquiries need follow-up until it's too late." },
           ].map((item, idx) => (
             <FadeIn
               key={idx}
