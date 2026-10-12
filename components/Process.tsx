@@ -7,9 +7,9 @@ export function Process() {
       <div className="container-custom">
         <FadeIn className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            Here&apos;s What Happens <span className="text-se-orange">After You Buy</span>
+            Here's What Happens <span className="text-se-orange">After You Reach Out</span>
           </h2>
-          <p className="text-se-muted-text">No sales call required to start — just a clear, one-time path from purchase to your walkthrough call.</p>
+          <p className="text-se-muted-text">Clear path from discovery call to live system, then monthly retainer for ongoing operations.</p>
         </FadeIn>
 
         <div className="grid md:grid-cols-4 gap-6 relative">
