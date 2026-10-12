@@ -51,31 +51,31 @@ export interface SamplePost {
   isSample: true
 }
 
-// Who We Serve — Nigerian SMEs that need operational digital systems
+// Who We Serve — Nigerian SMEs with broken daily operations
 export const icpSegments: IcpSegment[] = [
-  { label: "Neighbourhood Shops & Supermarkets", icon: ShoppingBag },
+  { label: "Neighbourhood Multi-Counter Shops", icon: ShoppingBag },
   { label: "Schools (Nursery & Primary)", icon: School },
   { label: "Furniture & Home Goods Sellers", icon: Home },
   { label: "Real Estate Agencies", icon: Building2 },
 ]
 
-// Primary offer: Setup + Monthly SaaS Retainer for operational systems
+// Primary offer: Setup + Monthly Retainer for operational systems (skills → cash flow, systems → scale)
 export const snapshotOffer: SnapshotOffer = {
-  name: "Business System Setup",
-  price: 150000,
-  priceLabel: "₦150,000",
+  name: "Operational System Setup",
+  price: 180000,
+  priceLabel: "₦180,000",
   tagline:
-    "One-time setup of your custom web/mobile system (shop, school, or property desk) plus ongoing monthly retainer for updates, support, and operations.",
+    "Done-for-you setup of the system that stops lost orders and WhatsApp chaos — then a monthly retainer so it keeps running and improving.",
 }
 
 export const snapshotDeliverables =
-  "Full setup of your branded system (customer app + staff dashboard), WhatsApp integration, staff training, initial data import, and 30 days of support. Then monthly retainer covers hosting, updates, reporting, and priority support."
+  "Branded customer + staff system, WhatsApp alerts, data import, staff training, and 30 days support. Live in 7–14 days. Monthly retainer covers hosting, updates, reporting, and priority support so operations stay smooth."
 
 export const processSteps: ProcessStep[] = [
-  { step: 1, title: "Discovery Call", description: "Short WhatsApp or call to understand your operations, departments, and what the system needs to handle daily." },
-  { step: 2, title: "Setup & Branding", description: "We configure your system, add your branding, import initial data, and integrate WhatsApp alerts." },
-  { step: 3, title: "Training & Launch", description: "Staff training session + go-live. Your team starts using the customer and admin sides immediately." },
-  { step: 4, title: "Monthly Retainer", description: "Ongoing hosting, updates, reporting, and support so the system keeps running smoothly and improves over time." },
+  { step: 1, title: "Discovery Call", description: "Map your current pain (lost orders, stock chaos, missing inquiries) and confirm the system fits." },
+  { step: 2, title: "Fast Setup", description: "We configure, brand, integrate WhatsApp, and import initial data. You get a working system quickly." },
+  { step: 3, title: "Training & Go-Live", description: "Staff training so the team starts using it the same week. First orders or inquiries flow immediately." },
+  { step: 4, title: "Monthly Retainer", description: "Ongoing system ownership: updates, monitoring, reporting, and support. The system stays core to daily operations." },
 ]
 
 export const processIcons = [CreditCard, UserCheck, Rocket, LineChart]
@@ -85,103 +85,102 @@ export const founderBio = {
   linkedinUrl: "https://www.linkedin.com/",
   linkedinLabel: "LinkedIn",
   bio:
-    "Founder of Scale-Edge Marketing LTD. I build practical digital systems for Nigerian businesses so owners can focus on operations instead of manual processes. Direct access — no layers.",
+    "Founder of Scale-Edge. I build operational systems for Nigerian businesses so owners stop losing money to manual processes. Skills create the cash flow; the system creates the scale. Direct access.",
 }
 
 export const samplePosts: SamplePost[] = [
   {
     id: "sp-shop",
     vertical: "Multi-Counter Shop",
-    sampleLabel: "SAMPLE — illustrates our approach",
-    hook: "One app for supermarket, bakery, furniture, and bookstore — customers order, staff manage stock, and you see everything in one place.",
+    sampleLabel: "PROOF — based on systems we've built",
+    hook: "Orders stop getting lost. Stock is visible. Customers get WhatsApp updates. Staff stop chasing messages.",
     body:
-      "No more paper slips or WhatsApp chaos. The system handles mixed baskets, production schedules, deliveries, and till in real time.\n\nOwners get daily reports. Customers get WhatsApp updates. Staff get a simple desk.\n\nThat's what a steady retainer system looks like for neighbourhood businesses.",
+      "One system for supermarket, bakery, furniture and more. Mixed baskets, production, deliveries and till in one place.\n\nOwners see daily numbers. The monthly retainer keeps it running and improving — not a website that dies after launch.",
     isSample: true,
   },
   {
     id: "sp-school",
     vertical: "School",
-    sampleLabel: "SAMPLE — illustrates our approach",
-    hook: "Parents get announcements and fee updates. Admin tracks everything without chasing papers.",
+    sampleLabel: "PROOF — based on systems we've built",
+    hook: "Parents stay informed. Admin stops chasing papers. Fees and announcements flow without friction.",
     body:
-      "A simple portal that keeps parents informed and admin organised. Fees, announcements, and basic reports in one place.\n\nMonthly retainer means the system stays updated and supported — not a one-time website that gets abandoned.",
+      "A portal that improves the customer's (parent's) position immediately. Monthly retainer ensures the system stays updated and supported.",
     isSample: true,
   },
 ]
 
 export const leadMagnet = {
-  title: "Free Checklist: Is Your Business Ready for a Digital System?",
+  title: "Free Checklist: Stop Losing Orders to Chaos",
   description:
-    "A short checklist for shop owners, school admins, and sellers who want to stop losing orders or messages to WhatsApp chaos.",
+    "A short checklist for shop owners and school admins who want to see where WhatsApp and paper are costing them sales and time.",
   privacyNote:
     "We'll only use your email to send the checklist and occasional updates. Unsubscribe anytime.",
   items: [
-    "List your main daily operations (orders, stock, fees, inquiries).",
-    "Note where WhatsApp or paper is causing delays or lost sales.",
-    "Identify who on your team needs access.",
-    "Decide if you need customer ordering, staff dashboard, or both.",
-    "Check if you can allocate 30 minutes for setup training.",
+    "List where orders or inquiries currently get lost.",
+    "Note the daily time spent chasing WhatsApp messages.",
+    "Identify the one process that causes the most friction.",
+    "Check if a customer + staff system would remove that friction.",
   ],
 }
 
 export const faqs: FaqItem[] = [
   {
-    question: "What businesses do you support?",
+    question: "What problem does this actually solve?",
     answer:
-      "Neighbourhood multi-counter shops (supermarket + bakery + furniture etc.), schools, furniture sellers, and real estate agencies in Nigeria. Systems built for local operations with WhatsApp integration.",
+      "The expensive everyday problem of broken operations: lost orders, unclear stock, WhatsApp chaos, and no visibility. The system improves the customer's and staff's position immediately while giving the owner control.",
   },
   {
-    question: "How does the retainer work?",
+    question: "Why a monthly retainer instead of a one-time build?",
     answer:
-      "After the one-time setup fee, you pay a monthly retainer (typically ₦35,000–₦65,000 depending on features and volume). This covers hosting, updates, support, and improvements so the system stays operational.",
+      "Skills create the initial cash flow. Systems create scale. The retainer keeps the system live, updated, and improving so it stays core to daily operations instead of becoming another abandoned tool.",
   },
   {
-    question: "Is this a custom build or SaaS?",
+    question: "How fast do I see results?",
     answer:
-      "It's a managed SaaS-style system. We configure and brand it for your business, then keep it running on a monthly retainer. You get a dedicated customer side and staff dashboard without managing servers yourself.",
+      "Most systems go live in 7–14 days. First orders or inquiries can flow within days of training. You get a win early, not after months of development.",
   },
   {
-    question: "How long does setup take?",
+    question: "Is there proof this works?",
     answer:
-      "Most systems go live in 7–14 days after the discovery call and data provision. Training is included so your team can start using it immediately.",
+      "Yes. We've built operational systems for multi-counter shops, schools, and other local businesses. The approach is the same: remove the daily friction with a system that runs on a retainer.",
   },
   {
-    question: "Can I cancel the retainer?",
+    question: "What if I want to cancel?",
     answer:
-      "Yes. Monthly retainers can be cancelled with 30 days notice. Setup is a one-time investment in your operational system.",
+      "Monthly retainers can be cancelled with 30 days notice. The setup fee is the one-time investment in getting the system live.",
   },
 ]
 
 export const funnelEngineeringOffer: RetainerOffer = {
   name: "Monthly Operations Retainer",
   tagline:
-    "Ongoing support, updates, reporting, and improvements for your business system so it keeps running smoothly every day.",
+    "The system that keeps running and improving after setup so daily operations stay smooth.",
 }
 
 export const funnelEngineeringDeliverables =
-  "Monthly hosting, security updates, performance monitoring, basic reporting, WhatsApp support, and minor feature tweaks. Priority response within business hours."
+  "Hosting, monitoring, updates, reporting, WhatsApp support, and minor improvements. Priority response so the system never becomes a burden."
 
 export const funnelEngineeringStages: ProcessStep[] = [
-  { step: 1, title: "Onboarding", description: "Discovery call + data collection + branding." },
-  { step: 2, title: "Build & Configure", description: "System setup tailored to your operations." },
-  { step: 3, title: "Launch & Train", description: "Go-live with staff training." },
-  { step: 4, title: "Monthly Operations", description: "Retainer covers ongoing support and improvements." },
+  { step: 1, title: "Onboarding", description: "Discovery + data + branding." },
+  { step: 2, title: "Configure", description: "Fast setup of the operational system." },
+  { step: 3, title: "Launch", description: "Training and go-live." },
+  { step: 4, title: "Retainer", description: "Ongoing system ownership and improvement." },
 ]
 
 export const funnelEngineeringIcons = [Search, Hammer, Rocket, BarChart3]
 
 export const funnelEngineeringPricingNote =
-  "Setup from ₦150,000 + monthly retainer from ₦35,000. Exact pricing discussed on the call based on your needs."
+  "Setup from ₦180,000 + monthly retainer from ₦40,000. Exact fit confirmed on the discovery call."
 
 export const funnelEngineeringFaqs: FaqItem[] = [
   {
-    question: "What is included in the monthly retainer?",
+    question: "What does the retainer actually buy?",
     answer:
-      "Hosting, updates, monitoring, reporting, and support so your system stays operational without you managing technical details.",
+      "A system that stays operational and improves over time, so you keep the daily gains without managing the technology yourself.",
   },
   {
-    question: "Do I need technical knowledge?",
+    question: "Do I need technical skills?",
     answer:
-      "No. We handle the technical side. Your team uses a simple staff dashboard and customers use the ordering or inquiry side.",
+      "No. We handle the system. Your team uses the simple staff side. Customers use the ordering or inquiry side.",
   },
 ]
