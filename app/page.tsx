@@ -16,6 +16,7 @@ import { CTABlock } from "@/components/CTABlock"
 import { StickyMobileCTA } from "@/components/StickyMobileCTA"
 import { Footer } from "@/components/Footer"
 import { ExitIntentModal } from "@/components/ExitIntentModal"
+import { WhatsAppButton } from "@/components/WhatsAppButton"
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <Footer />
       <StickyMobileCTA />
       <ExitIntentModal />
+      <WhatsAppButton />
     </main>
   )
 }
