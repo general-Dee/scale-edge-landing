@@ -12,26 +12,26 @@ export function Hero() {
           className="flex flex-col items-center text-center max-w-3xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6 text-se-ink">
-            Done-For-You LinkedIn Marketing for Business Owners Who Don&apos;t Have Time to Post
+            Digital Systems That Run Your Business Every Day
           </h1>
           <p className="text-lg md:text-xl text-se-muted-text mb-6 max-w-2xl leading-relaxed">
-            Built for real estate agents, dentists, contractors, and law firms who know LinkedIn
-            matters but don&apos;t have the hours to write posts, message prospects, and track what&apos;s working.
+            Ready web + mobile systems for Nigerian shops, schools, furniture sellers, and real estate agencies.
+            Customers order or inquire. Staff manage everything. You get steady operations without the chaos.
           </p>
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
-            New agency, direct founder access — <span className="text-se-orange">no account managers, no juniors.</span>
+            Setup + monthly retainer — <span className="text-se-orange">so the system stays running and supported.</span>
           </p>
           <SnapshotCTAButton size="lg" location="hero" />
-          <p className="text-sm text-se-muted-text mt-3">One-time payment. Secure checkout. No subscription.</p>
+          <p className="text-sm text-se-muted-text mt-3">Start with a discovery call. No long contracts.</p>
           <a
             href="#email-capture"
             className="text-sm text-se-muted-text hover:text-se-orange mt-4 underline underline-offset-4"
           >
-            Not ready to buy? Get the free LinkedIn Content Checklist instead →
+            Not ready? Get the free readiness checklist →
           </a>
           <div className="flex items-center gap-2 mt-10 text-sm text-se-muted-text">
             <Users className="w-4 h-4 text-se-orange" />
-            <span>Built for local, service-based businesses — not another DTC ad agency.</span>
+            <span>Built for local Nigerian businesses that need daily operational systems.</span>
           </div>
         </FadeIn>
       </div>
