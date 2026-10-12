@@ -6,48 +6,25 @@ import { cn } from "@/utils/cn"
 import { snapshotOffer } from "@/lib/data"
 import { trackConversion } from "@/lib/analytics"
 
-// Stripe Payment Link for the Growth Snapshot. Set NEXT_PUBLIC_STRIPE_GROWTH_SNAPSHOT_LINK
-// in .env.local once the Stripe account + Payment Link exist. Until then, every CTA
-// using this component renders a disabled "coming soon" state instead of a dead link.
-const PAYMENT_LINK_URL = process.env.NEXT_PUBLIC_STRIPE_GROWTH_SNAPSHOT_LINK
+// Temporary: point to WhatsApp or form until Stripe/booking link is live.
+// Replace with actual discovery booking link (Calendly, WhatsApp, or form) when ready.
+const DISCOVERY_LINK = process.env.NEXT_PUBLIC_DISCOVERY_LINK || "https://wa.me/2348086655000?text=Hi%2C%20I%20want%20to%20discuss%20a%20business%20system%20setup"
 
 interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | "className"> {
   children?: ReactNode
   location?: string
 }
 
-/**
- * The single primary CTA for the site: buy the $147 Growth Snapshot.
- * Renders a real link to the Stripe Payment Link once it's configured, or a
- * clearly-labeled disabled "coming soon" button (with tooltip) when it isn't —
- * never a silent `#` link or a 404.
- */
 export function SnapshotCTAButton({ children, size = "lg", variant, className, location = "unknown" }: SnapshotCTAButtonProps) {
-  const content = children ?? `Get Your ${snapshotOffer.priceLabel} Growth Snapshot →`
-
-  if (!PAYMENT_LINK_URL) {
-    return (
-      <Button
-        type="button"
-        size={size}
-        variant={variant}
-        className={cn("cursor-not-allowed opacity-60", className)}
-        aria-disabled="true"
-        title="Checkout isn't live yet — the Stripe Payment Link is being set up. Check back soon."
-      >
-        <span>{content}</span>
-        <span className="ml-2 text-xs font-normal">(Coming soon)</span>
-      </Button>
-    )
-  }
+  const content = children ?? `Book Discovery Call — Setup from ${snapshotOffer.priceLabel} →`
 
   return (
     <Button size={size} variant={variant} className={className} asChild>
       <a
-        href={PAYMENT_LINK_URL}
+        href={DISCOVERY_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackConversion("snapshot_cta_click", { location })}
+        onClick={() => trackConversion("discovery_cta_click", { location })}
       >
         {content}
       </a>
