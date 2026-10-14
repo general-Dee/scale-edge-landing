@@ -6,11 +6,12 @@ declare global {
   }
 }
 
-type ConversionEvent = "lead_capture" | "snapshot_cta_click"
+type ConversionEvent = "lead_capture" | "snapshot_cta_click" | "discovery_cta_click"
 
 const LI_CONVERSION_IDS: Record<ConversionEvent, string | undefined> = {
   lead_capture: process.env.NEXT_PUBLIC_LI_CONVERSION_ID_LEAD,
   snapshot_cta_click: process.env.NEXT_PUBLIC_LI_CONVERSION_ID_SNAPSHOT,
+  discovery_cta_click: undefined,
 }
 
 export function trackConversion(event: ConversionEvent, params?: Record<string, string>) {
