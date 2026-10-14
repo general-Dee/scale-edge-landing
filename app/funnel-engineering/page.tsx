@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Digital Funnel Engineering — Done-For-You Lead Funnels",
     description:
       "An ongoing, done-for-you build-and-run engagement for local service businesses who want a real lead funnel behind their presence, not just more posts.",
-    url: "https://scale-edge.com/funnel-engineering",
+    url: "https://scale-edge.org/funnel-engineering",
     siteName: "Scale-Edge Marketing LTD",
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Scale-Edge Marketing LTD — Digital Funnel Engineering" }],
     type: "website",

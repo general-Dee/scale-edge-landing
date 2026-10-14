@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const landingMetadata: Metadata = {
-  metadataBase: new URL('https://scale-edge.com'),
+  metadataBase: new URL('https://scale-edge.org'),
   title: 'Scale-Edge | Business Systems from ₦250,000 Setup',
   description:
     'We build your business system, then maintain and market it under one monthly retainer. ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
@@ -9,7 +9,7 @@ export const landingMetadata: Metadata = {
     title: 'Scale-Edge | Business Systems from ₦250,000 Setup + Monthly Retainer',
     description:
       'Build + maintenance + marketing under one monthly fee — ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
-    url: 'https://scale-edge.com',
+    url: 'https://scale-edge.org',
     siteName: 'Scale-Edge Marketing LTD',
     images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Scale-Edge Marketing LTD — Done-For-You LinkedIn Marketing' }],
     type: 'website',
