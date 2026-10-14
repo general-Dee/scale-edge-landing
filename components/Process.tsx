@@ -9,7 +9,7 @@ export function Process() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
             From Chaos to System in <span className="text-se-orange">Days</span>
           </h2>
-          <p className="text-se-muted-text">Clear path: discovery → fast setup → go-live → monthly retainer that creates leverage.</p>
+          <p className="text-se-muted-text">Clear path: discovery → fast setup → go-live → one monthly retainer for maintenance and marketing.</p>
         </FadeIn>
 
         <div className="grid md:grid-cols-4 gap-6 relative">

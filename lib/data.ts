@@ -62,14 +62,14 @@ export const icpSegments: IcpSegment[] = [
 // Primary offer: Setup + Monthly Retainer for operational systems (skills → cash flow, systems → scale)
 export const snapshotOffer: SnapshotOffer = {
   name: "Operational System Setup",
-  price: 180000,
-  priceLabel: "₦180,000",
+  price: 250000,
+  priceLabel: "₦250,000",
   tagline:
-    "Done-for-you setup of the system that stops lost orders and WhatsApp chaos — then a monthly retainer so it keeps running and improving.",
+    "We build your system, then one monthly retainer covers maintenance and marketing — so you never pay once and get left alone.",
 }
 
 export const snapshotDeliverables =
-  "Branded customer + staff system, WhatsApp alerts, data import, staff training, and 30 days support. Live in 7–14 days. Monthly retainer covers hosting, updates, reporting, and priority support so operations stay smooth."
+  "Branded customer + staff system, WhatsApp alerts, data import, staff training, and 30 days support. Live in 7–14 days. Then one monthly retainer covers hosting, maintenance, updates, marketing, reporting, and priority support — ₦50,000/month for the first 3 months, then ₦75,000/month."
 
 export const processSteps: ProcessStep[] = [
   { step: 1, title: "Discovery Call", description: "Map your current pain (lost orders, stock chaos, missing inquiries) and confirm the system fits." },
@@ -95,7 +95,7 @@ export const samplePosts: SamplePost[] = [
     sampleLabel: "PROOF — based on systems we've built",
     hook: "Orders stop getting lost. Stock is visible. Customers get WhatsApp updates. Staff stop chasing messages.",
     body:
-      "One system for supermarket, bakery, furniture and more. Mixed baskets, production, deliveries and till in one place.\n\nOwners see daily numbers. The monthly retainer keeps it running and improving — not a website that dies after launch.",
+      "One system for supermarket, bakery, furniture and more. Mixed baskets, production, deliveries and till in one place.\n\nOwners see daily numbers. One monthly retainer keeps it maintained and marketed — not a website that dies after launch.",
     isSample: true,
   },
   {
@@ -104,7 +104,7 @@ export const samplePosts: SamplePost[] = [
     sampleLabel: "PROOF — based on systems we've built",
     hook: "Parents stay informed. Admin stops chasing papers. Fees and announcements flow without friction.",
     body:
-      "A portal that improves the customer's (parent's) position immediately. Monthly retainer ensures the system stays updated and supported.",
+      "A portal that improves the customer's (parent's) position immediately. One monthly retainer keeps the system maintained, updated, and marketed.",
     isSample: true,
   },
 ]
@@ -130,9 +130,9 @@ export const faqs: FaqItem[] = [
       "The expensive everyday problem of broken operations: lost orders, unclear stock, WhatsApp chaos, and no visibility. The system improves the customer's and staff's position immediately while giving the owner control.",
   },
   {
-    question: "Why a monthly retainer instead of a one-time build?",
+    question: "How much does it cost, and why a monthly retainer?",
     answer:
-      "Skills create the initial cash flow. Systems create scale. The retainer keeps the system live, updated, and improving so it stays core to daily operations instead of becoming another abandoned tool.",
+      "₦250,000 setup, then ₦50,000/month for the first 3 months, then ₦75,000/month ongoing. We build your system and then keep it maintained and marketed under one monthly fee — so you are not paying once and being left alone. The retainer keeps the system live, updated, and bringing in customers instead of becoming another abandoned tool.",
   },
   {
     question: "How fast do I see results?",
@@ -147,7 +147,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What if I want to cancel?",
     answer:
-      "Monthly retainers can be cancelled with 30 days notice. The setup fee is the one-time investment in getting the system live.",
+      "Monthly retainers can be cancelled with 30 days notice. The ₦250,000 setup fee is the one-time investment in building the system and getting it live.",
   },
 ]
 
@@ -158,7 +158,7 @@ export const funnelEngineeringOffer: RetainerOffer = {
 }
 
 export const funnelEngineeringDeliverables =
-  "Hosting, monitoring, updates, reporting, WhatsApp support, and minor improvements. Priority response so the system never becomes a burden."
+  "Hosting, maintenance, updates, marketing, reporting, WhatsApp support, and minor improvements. Priority response so the system never becomes a burden."
 
 export const funnelEngineeringStages: ProcessStep[] = [
   { step: 1, title: "Onboarding", description: "Discovery + data + branding." },
@@ -170,7 +170,7 @@ export const funnelEngineeringStages: ProcessStep[] = [
 export const funnelEngineeringIcons = [Search, Hammer, Rocket, BarChart3]
 
 export const funnelEngineeringPricingNote =
-  "Setup from ₦180,000 + monthly retainer from ₦40,000. Exact fit confirmed on the discovery call."
+  "₦250,000 setup, then ₦50,000/month for the first 3 months, then ₦75,000/month ongoing. Build + maintenance + marketing under one monthly retainer. Exact fit confirmed on the discovery call."
 
 export const funnelEngineeringFaqs: FaqItem[] = [
   {

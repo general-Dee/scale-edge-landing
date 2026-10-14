@@ -16,13 +16,13 @@ export function CTABlock() {
             Ready to Replace Chaos With a <span className="text-se-orange">System?</span>
           </h2>
           <p className="text-lg text-se-muted-text mb-8 max-w-2xl mx-auto">
-            Skills get you the first customers. The system gets you leverage. Setup once, then the monthly retainer keeps operations running and improving.
+            Skills get you the first customers. The system gets you leverage. We build it, then one monthly retainer keeps it maintained and marketed: ₦250,000 setup, ₦50,000/month for 3 months, then ₦75,000/month.
           </p>
           <div className="flex flex-col items-center gap-4">
             <SnapshotCTAButton size="lg" location="cta-block" />
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-se-muted-text">
-            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> Setup + sticky retainer</span>
+            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> Build + maintenance + marketing</span>
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> Live in days</span>
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-se-orange" /> Proof from local systems</span>
           </div>

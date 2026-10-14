@@ -19,7 +19,7 @@ export function Hero() {
             Live in days, not months.
           </p>
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
-            Setup + monthly retainer — <span className="text-se-orange">skills create the cash flow, the system creates the scale.</span>
+            ₦250,000 setup, then one monthly retainer (₦50,000/mo for 3 months, then ₦75,000/mo) for build, maintenance and marketing — <span className="text-se-orange">skills create the cash flow, the system creates the scale.</span>
           </p>
           <SnapshotCTAButton size="lg" location="hero" />
           <p className="text-sm text-se-muted-text mt-3">Discovery call first. Proof from systems already built for local businesses.</p>

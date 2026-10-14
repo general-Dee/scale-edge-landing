@@ -24,7 +24,7 @@ export function Services() {
           </div>
           <p className="text-se-muted-text">{snapshotDeliverables}</p>
           <p className="text-xs text-se-muted-text mt-4">
-            Starts at {snapshotOffer.priceLabel} setup + monthly retainer. Unique, expensive enough to be sticky, and proven on local systems.
+            {snapshotOffer.priceLabel} setup, then one monthly retainer for maintenance and marketing — ₦50,000/month for the first 3 months, then ₦75,000/month. Proven on local systems.
           </p>
         </FadeIn>
 

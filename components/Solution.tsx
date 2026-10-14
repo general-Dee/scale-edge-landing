@@ -24,14 +24,14 @@ export function Solution() {
               A System That Improves Everyone’s Position — <span className="text-se-orange">Fast</span>
             </h2>
             <p className="text-se-muted-text text-lg mb-6">
-              Dream outcome: orders stop getting lost and operations run without constant chasing. Likelihood is high because we’ve already built these systems for local businesses. Time to first win is days, not months. Effort is low — we handle setup and the retainer keeps it running.
+              Dream outcome: orders stop getting lost and operations run without constant chasing. Likelihood is high because we’ve already built these systems for local businesses. Time to first win is days, not months. Effort is low — we build it, and one monthly retainer keeps it maintained and marketed.
             </p>
             <ul className="space-y-3 mb-8">
               {[
                 "Customer side that makes ordering or inquiring easy",
                 "Staff dashboard that removes daily friction",
                 "WhatsApp alerts so nothing falls through",
-                "Monthly retainer so the system stays core to operations",
+                "One monthly retainer for maintenance + marketing (₦50k/mo x3, then ₦75k/mo)",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />

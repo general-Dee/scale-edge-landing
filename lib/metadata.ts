@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 
 export const landingMetadata: Metadata = {
   metadataBase: new URL('https://scale-edge.com'),
-  title: 'Scale-Edge | $147 Growth Snapshot — Done-For-You LinkedIn Audit for Local Service Businesses',
+  title: 'Scale-Edge | Business Systems from ₦250,000 Setup',
   description:
-    'A one-time, done-for-you audit of your LinkedIn presence for real estate agents, dentists, contractors, and law firms — what’s working, what’s costing you leads, and what to fix first. $147 one-time, no subscription.',
+    'We build your business system, then maintain and market it under one monthly retainer. ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
   openGraph: {
-    title: 'The $147 Growth Snapshot — Done-For-You LinkedIn Audit for Business Owners Who Don’t Have Time to Post',
+    title: 'Scale-Edge | Business Systems from ₦250,000 Setup + Monthly Retainer',
     description:
-      'A one-time LinkedIn audit — what’s working, what’s costing you leads, and what to fix first — built for real estate agents, dental practices, contractors, and law firms. No subscription, no long-term contract.',
+      'Build + maintenance + marketing under one monthly fee — ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
     url: 'https://scale-edge.com',
     siteName: 'Scale-Edge Marketing LTD',
     images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Scale-Edge Marketing LTD — Done-For-You LinkedIn Marketing' }],
@@ -16,8 +16,8 @@ export const landingMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The $147 Growth Snapshot — Done-For-You LinkedIn Audit for Local Service Businesses',
-    description: 'A one-time, done-for-you LinkedIn audit — no subscription, no long-term contract.',
+    title: 'Scale-Edge | Business Systems from ₦250,000 Setup',
+    description: 'Build + maintenance + marketing under one monthly retainer. ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
     images: ['/og-image.svg'],
   },
   robots: { index: true, follow: true },
