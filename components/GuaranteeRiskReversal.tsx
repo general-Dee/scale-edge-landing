@@ -16,7 +16,7 @@ export function GuaranteeRiskReversal() {
             Built, Maintained, Marketed. <span className="text-se-orange">No Long-Term Lock-In.</span>
           </h2>
           <p className="text-se-muted-text mb-8 max-w-xl mx-auto">
-            Your custom system (worth ₦10 million) is built completely free — no setup fee. Then
+            Your custom system (worth ₦10 million) is built completely free — no setup fee. Then{" "}
             {snapshotOffer.priceLabel} keeps it maintained and marketed with Meta ads. If it doesn&apos;t bring
             orders or enquiries within 30 days, we keep working at no extra cost. Cancel with
             30 days&apos; notice.
