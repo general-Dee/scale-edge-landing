@@ -3,9 +3,7 @@ import { Hero } from "@/components/Hero"
 import { SocialProofBar } from "@/components/SocialProofBar"
 import { Problem } from "@/components/Problem"
 import { Solution } from "@/components/Solution"
-// FounderCredibility is temporarily hidden until real founder name/bio/LinkedIn
-// content replaces the TBD placeholders in lib/data.ts.
-// import { FounderCredibility } from "@/components/FounderCredibility"
+import { FounderCredibility } from "@/components/FounderCredibility"
 import { Services } from "@/components/Services"
 import { Process } from "@/components/Process"
 import { ProofOfCraft } from "@/components/ProofOfCraft"
@@ -26,7 +24,7 @@ export default function Home() {
       <SocialProofBar />
       <Problem />
       <Solution />
-      {/* <FounderCredibility /> */}
+      <FounderCredibility />
       <Services />
       <Process />
       <ProofOfCraft />

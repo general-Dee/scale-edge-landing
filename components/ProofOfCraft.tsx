@@ -34,7 +34,7 @@ export function ProofOfCraft() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-se-ink">{post.vertical} Owner</div>
-                    <div className="text-xs text-se-muted-text">1st • LinkedIn</div>
+                    <div className="text-xs text-se-muted-text">Sample post</div>
                   </div>
                 </div>
                 <p className="font-semibold text-se-ink mb-2">{post.hook}</p>

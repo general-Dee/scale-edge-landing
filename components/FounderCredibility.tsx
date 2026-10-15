@@ -1,4 +1,4 @@
-import { User, Linkedin } from "lucide-react"
+import { User } from "lucide-react"
 import { founderBio } from "@/lib/data"
 import { FadeIn } from "@/components/FadeIn"
 
@@ -8,10 +8,10 @@ export function FounderCredibility() {
       <div className="container-custom">
         <FadeIn className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-se-ink">
-            See the Exact Kind of Content We Write
+            Meet the Founder
           </h2>
           <p className="text-se-muted-text text-lg mb-10">
-            This is our founder&apos;s own LinkedIn — the same voice, strategy, and consistency we bring to your account.
+            Scale-Edge Marketing LTD builds and runs business systems for local businesses in Nigeria.
           </p>
 
           <div className="flex flex-col items-center gap-4 bg-se-bg rounded-2xl border border-dashed border-se-border p-8">
@@ -20,17 +20,7 @@ export function FounderCredibility() {
             </div>
             <div className="text-xl font-bold text-se-ink">{founderBio.name}</div>
             <p className="text-se-muted-text max-w-xl">{founderBio.bio}</p>
-            <a
-              href="#"
-              aria-disabled="true"
-              className="inline-flex items-center gap-2 text-se-orange font-medium underline underline-offset-4"
-            >
-              <Linkedin className="w-4 h-4" />
-              {founderBio.linkedinLabel}
-            </a>
-            <p className="text-xs text-se-muted-text mt-2">
-              Placeholder — replace with the founder&apos;s real name, photo, and LinkedIn profile URL before launch.
-            </p>
+            <p className="text-se-muted-text max-w-xl">{founderBio.work}</p>
           </div>
         </FadeIn>
       </div>

@@ -82,10 +82,10 @@ export const processIcons = [CreditCard, UserCheck, Rocket, LineChart]
 
 export const founderBio = {
   name: "Damilare Oshinowo",
-  linkedinUrl: "https://www.linkedin.com/",
-  linkedinLabel: "LinkedIn",
   bio:
-    "Founder of Scale-Edge. I build operational systems for Nigerian businesses so owners stop losing money to manual processes. Skills create the cash flow; the system creates the scale. Direct access.",
+    "Damilare Oshinowo founded Scale-Edge Marketing LTD in Nigeria. The company builds custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing.",
+  work:
+    "Recent work includes Dallema, built for a Kaduna shop, and Hungry Nomad, which takes 50–100 orders a week.",
 }
 
 export const samplePosts: SamplePost[] = [
