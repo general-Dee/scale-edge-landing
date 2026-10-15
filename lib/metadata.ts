@@ -2,13 +2,11 @@ import type { Metadata } from 'next'
 
 export const landingMetadata: Metadata = {
   metadataBase: new URL('https://scale-edge.org'),
-  title: 'Scale-Edge | Business Systems from ₦250,000 Setup',
-  description:
-    'We build your business system, then maintain and market it under one monthly retainer. ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
+  title: 'Scale-Edge Marketing | Custom Business Systems Built Free, ₦300,000/month',
+  description: 'We build your ordering site or business system free of charge, worth ₦10 million, and run your Meta ads for ₦300,000 a month. Live within two weeks.',
   openGraph: {
-    title: 'Scale-Edge | Business Systems from ₦250,000 Setup + Monthly Retainer',
-    description:
-      'Build + maintenance + marketing under one monthly fee — ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
+    title: 'Scale-Edge Marketing | Custom Business Systems Built Free, ₦300,000/month',
+    description: 'We build your ordering site or business system free of charge, worth ₦10 million, and run your Meta ads for ₦300,000 a month. Live within two weeks.',
     url: 'https://scale-edge.org',
     siteName: 'Scale-Edge Marketing LTD',
     images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Scale-Edge Marketing LTD — Done-For-You LinkedIn Marketing' }],
@@ -16,8 +14,8 @@ export const landingMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Scale-Edge | Business Systems from ₦250,000 Setup',
-    description: 'Build + maintenance + marketing under one monthly retainer. ₦250,000 setup, then ₦50,000/month for 3 months, then ₦75,000/month.',
+    title: 'Scale-Edge Marketing | Custom Business Systems Built Free, ₦300,000/month',
+    description: 'We build your ordering site or business system free of charge, worth ₦10 million, and run your Meta ads for ₦300,000 a month. Live within two weeks.',
     images: ['/og-image.svg'],
   },
   robots: { index: true, follow: true },
