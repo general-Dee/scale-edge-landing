@@ -1,4 +1,3 @@
-import { User } from "lucide-react"
 import { founderBio } from "@/lib/data"
 import { FadeIn } from "@/components/FadeIn"
 
@@ -15,9 +14,17 @@ export function FounderCredibility() {
           </p>
 
           <div className="flex flex-col items-center gap-4 bg-se-bg rounded-2xl border border-dashed border-se-border p-8">
-            <div className="w-24 h-24 rounded-full bg-se-ink/5 border border-se-border flex items-center justify-center">
-              <User className="w-10 h-10 text-se-muted-text" />
-            </div>
+            <img
+              src="/founder-damilare.webp"
+              srcSet="/founder-damilare-300.webp 300w, /founder-damilare.webp 600w"
+              sizes="128px"
+              alt="Damilare Oshinowo, founder of Scale-Edge Marketing LTD"
+              width={128}
+              height={128}
+              loading="lazy"
+              decoding="async"
+              className="w-32 h-32 rounded-full object-cover border-4 border-se-orange/20 shadow-sm"
+            />
             <div className="text-xl font-bold text-se-ink">{founderBio.name}</div>
             <p className="text-se-muted-text max-w-xl">{founderBio.bio}</p>
             <p className="text-se-muted-text max-w-xl">{founderBio.work}</p>
