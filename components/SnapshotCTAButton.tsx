@@ -15,7 +15,7 @@ interface SnapshotCTAButtonProps extends Pick<ButtonProps, "size" | "variant" | 
 }
 
 export function SnapshotCTAButton({ children, size = "lg", variant, className, location = "unknown" }: SnapshotCTAButtonProps) {
-  const content = children ?? `Book Discovery Call — Setup from ${snapshotOffer.priceLabel} →`
+  const content = children ?? `Book Discovery Call — Free Build, ${snapshotOffer.priceLabel} →`
 
   return (
     <Button size={size} variant={variant} className={className} asChild>

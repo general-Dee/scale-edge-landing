@@ -24,7 +24,7 @@ export function Services() {
           </div>
           <p className="text-se-muted-text">{snapshotDeliverables}</p>
           <p className="text-xs text-se-muted-text mt-4">
-            {snapshotOffer.priceLabel} setup, then one monthly retainer for maintenance and marketing — ₦50,000/month for the first 3 months, then ₦75,000/month. Proven on local systems.
+            Built free — no setup fee. Then {snapshotOffer.priceLabel} for maintenance and Meta-ads marketing. Proven on local systems. <a href="/whats_included.html" className="underline">See what&apos;s included</a>.
           </p>
         </FadeIn>
 

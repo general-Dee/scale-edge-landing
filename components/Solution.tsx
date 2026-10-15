@@ -31,7 +31,7 @@ export function Solution() {
                 "Customer side that makes ordering or inquiring easy",
                 "Staff dashboard that removes daily friction",
                 "WhatsApp alerts so nothing falls through",
-                "One monthly retainer for maintenance + marketing (₦50k/mo x3, then ₦75k/mo)",
+                "Built free (worth ₦10 million), then ₦300,000/month for maintenance + Meta-ads marketing",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-se-orange shrink-0" />

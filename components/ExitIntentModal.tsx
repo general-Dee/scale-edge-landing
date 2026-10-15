@@ -54,8 +54,7 @@ export function ExitIntentModal() {
         </div>
         <h3 className="text-2xl font-bold mb-2 text-se-ink">Before You Go</h3>
         <p className="text-se-muted-text mb-5">
-          See exactly what&apos;s costing you leads on LinkedIn — get the {snapshotOffer.priceLabel}{" "}
-          {snapshotOffer.name} now.
+          Get your {snapshotOffer.name.toLowerCase()} built free — then {snapshotOffer.priceLabel} for maintenance and Meta-ads marketing.
         </p>
         <SnapshotCTAButton size="lg" className="w-full justify-center" location="exit-intent-modal" />
         <div className="text-xs text-se-muted-text uppercase tracking-wide my-5">or</div>

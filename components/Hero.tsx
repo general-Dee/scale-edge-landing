@@ -16,10 +16,10 @@ export function Hero() {
           </h1>
           <p className="text-lg md:text-xl text-se-muted-text mb-6 max-w-2xl leading-relaxed">
             A done-for-you operational system for Nigerian shops, schools and sellers. Customers order. Staff manage stock and till. You get daily visibility.
-            Live in days, not months.
+            Live within two weeks.
           </p>
           <p className="text-base md:text-lg text-se-ink font-medium mb-10">
-            ₦250,000 setup, then one monthly retainer (₦50,000/mo for 3 months, then ₦75,000/mo) for build, maintenance and marketing — <span className="text-se-orange">skills create the cash flow, the system creates the scale.</span>
+            Your custom system (worth ₦10 million) built completely free — no setup fee. Then ₦300,000/month for maintenance and Meta-ads marketing. <a href="/whats_included.html" className="underline">See what&apos;s included</a> — <span className="text-se-orange">skills create the cash flow, the system creates the scale.</span>
           </p>
           <SnapshotCTAButton size="lg" location="hero" />
           <p className="text-sm text-se-muted-text mt-3">Discovery call first. Proof from systems already built for local businesses.</p>

@@ -59,17 +59,17 @@ export const icpSegments: IcpSegment[] = [
   { label: "Real Estate Agencies", icon: Building2 },
 ]
 
-// Primary offer: Setup + Monthly Retainer for operational systems (skills → cash flow, systems → scale)
+// Primary offer: free custom build + ₦300,000/month maintenance & Meta-ads marketing (skills → cash flow, systems → scale)
 export const snapshotOffer: SnapshotOffer = {
-  name: "Operational System Setup",
-  price: 250000,
-  priceLabel: "₦250,000",
+  name: "Custom Business System",
+  price: 300000,
+  priceLabel: "₦300,000/month",
   tagline:
-    "We build your system, then one monthly retainer covers maintenance and marketing — so you never pay once and get left alone.",
+    "We build your custom system free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing.",
 }
 
 export const snapshotDeliverables =
-  "Branded customer + staff system, WhatsApp alerts, data import, staff training, and 30 days support. Live in 7–14 days. Then one monthly retainer covers hosting, maintenance, updates, marketing, reporting, and priority support — ₦50,000/month for the first 3 months, then ₦75,000/month."
+  "Branded customer + staff system, WhatsApp alerts, data import and staff training — a custom system worth ₦10 million, built completely free with no setup fee. Live within two weeks. Then ₦300,000/month covers hosting, maintenance, updates, Meta-ads marketing, reporting and priority support."
 
 export const processSteps: ProcessStep[] = [
   { step: 1, title: "Discovery Call", description: "Map your current pain (lost orders, stock chaos, missing inquiries) and confirm the system fits." },
@@ -132,12 +132,12 @@ export const faqs: FaqItem[] = [
   {
     question: "How much does it cost, and why a monthly retainer?",
     answer:
-      "₦250,000 setup, then ₦50,000/month for the first 3 months, then ₦75,000/month ongoing. We build your system and then keep it maintained and marketed under one monthly fee — so you are not paying once and being left alone. The retainer keeps the system live, updated, and bringing in customers instead of becoming another abandoned tool.",
+      "There is no setup fee: we build your custom system (worth ₦10 million) completely free. You pay ₦300,000/month, which covers maintenance plus Meta-ads marketing — so you are not paying once and being left alone. The retainer keeps the system live, updated, and bringing in customers instead of becoming another abandoned tool.",
   },
   {
     question: "How fast do I see results?",
     answer:
-      "Most systems go live in 7–14 days. First orders or inquiries can flow within days of training. You get a win early, not after months of development.",
+      "Your system goes live within two weeks. First orders or inquiries can flow within days of training. You get a win early, not after months of development.",
   },
   {
     question: "Is there proof this works?",
@@ -147,7 +147,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What if I want to cancel?",
     answer:
-      "Monthly retainers can be cancelled with 30 days notice. The ₦250,000 setup fee is the one-time investment in building the system and getting it live.",
+      "You can cancel with 30 days' notice. There is no setup fee to lose, because the build is free. And with our 30-day guarantee, if the system doesn't bring orders or enquiries within 30 days, we keep working at no extra cost.",
   },
 ]
 
@@ -170,7 +170,7 @@ export const funnelEngineeringStages: ProcessStep[] = [
 export const funnelEngineeringIcons = [Search, Hammer, Rocket, BarChart3]
 
 export const funnelEngineeringPricingNote =
-  "₦250,000 setup, then ₦50,000/month for the first 3 months, then ₦75,000/month ongoing. Build + maintenance + marketing under one monthly retainer. Exact fit confirmed on the discovery call."
+  "Custom system (worth ₦10 million) built free, no setup fee. ₦300,000/month covers maintenance + Meta-ads marketing. Live within two weeks. Exact fit confirmed on the discovery call."
 
 export const funnelEngineeringFaqs: FaqItem[] = [
   {
