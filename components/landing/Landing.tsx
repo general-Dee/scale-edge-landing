@@ -131,6 +131,7 @@ function Proof() {
   const items = [
     { name: "Hungry Nomad", url: "https://hungrynomad.menu", label: "hungrynomad.menu", what: "Food ordering site in Kaduna. It now takes 50–100 orders a week.", m: "/work/hungrynomad-mobile.webp", d: "/work/hungrynomad-desktop.webp" },
     { name: "Dallema", url: "https://dallema.vercel.app", label: "dallema.vercel.app", what: "Online shop built for a Kaduna shop: customers browse, order and pay from home.", m: "/work/dallema-mobile.webp", d: "/work/dallema-desktop.webp" },
+    { name: "Hafiz Books", url: "https://hafizbooks-store.vercel.app", label: "hafizbooks-store.vercel.app", what: "Bookshop web app for Bookshop Avenue: customers browse by genre, view books, and check out online.", m: "/work/hafizbooks-mobile.webp", d: "/work/hafizbooks-desktop.webp" },
   ]
   return (
     <Section id="work" eyebrow="Proof" title="Real systems we've built" intro="Not mock-ups. These are live sites for real Kaduna businesses." tone="surface">
