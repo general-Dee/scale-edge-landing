@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(plusJakarta.variable, "bg-se-bg text-se-ink antialiased")}>
+      <body className={cn(plusJakarta.variable, "bg-se-bg text-se-ink antialiased font-sans")}>
         {children}
         <Analytics />
       </body>
