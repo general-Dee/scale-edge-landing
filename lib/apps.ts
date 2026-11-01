@@ -76,13 +76,13 @@ export const builtApps: BuiltApp[] = [
 ]
 
 export const moreClientSites: ClientSite[] = [
-  { name: "Voltream", domains: [{ domain: "admin.voltream.com", live: true }] },
+  { name: "Voltream", domains: [{ domain: "admin.voltream.com", live: false }] },
   { name: "Damau Milk Farm", domains: [{ domain: "damaumilkfarm.com", live: true }] },
   {
     name: "KMDMC",
     domains: [
-      { domain: "kadunamarkets.com", live: true },
-      { domain: "kadunaproperties.org", live: true },
+      { domain: "kadunamarkets.com", live: false },
+      { domain: "kadunaproperties.org", live: false },
     ],
   },
 ]
