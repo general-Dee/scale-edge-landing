@@ -136,7 +136,7 @@ function Proof() {
     { name: "Hafiz Books", url: "https://hafizbooks-store.vercel.app", label: "hafizbooks-store.vercel.app", what: "Bookshop web app for Bookshop Avenue: customers browse by genre, view books, and check out online.", m: "/work/hafizbooks-mobile.webp", d: "/work/hafizbooks-desktop.webp" },
   ]
   return (
-    <Section id="work" eyebrow="Proof" title="Real systems we've built" intro="Not mock-ups. These are live sites for real Nigerian businesses." tone="surface">
+    <Section id="work" eyebrow="Proof" title="Real systems we've built" intro="Not mock-ups. These are live sites for real Nigerian businesses: Dalema in Abuja and Kaduna, and Hafiz Books in Kaduna." tone="surface">
       <div className="grid gap-10 lg:grid-cols-2">
         {items.map((x) => (
           <article key={x.name} className="rounded-3xl border border-se-border bg-se-bg p-6 md:p-8">
