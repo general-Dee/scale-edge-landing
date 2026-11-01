@@ -132,11 +132,11 @@ function Hero() {
 function Proof() {
   const items = [
     { name: "Hungry Nomad", url: "https://hungrynomad.menu", label: "hungrynomad.menu", what: "Food ordering site in Kaduna. It now takes 50–100 orders a week.", m: "/work/hungrynomad-mobile.webp", d: "/work/hungrynomad-desktop.webp" },
-    { name: "Dalema", url: "https://dallema.vercel.app", label: "Dalema", what: "Online shop built for a shop in Abuja and Lagos: customers browse, order and pay from home.", m: "/work/dallema-mobile.webp", d: "/work/dallema-desktop.webp" },
+    { name: "Dalema", url: "https://dallema.vercel.app", label: "Dalema", what: "Online shop built for a shop with branches in Abuja and Kaduna: customers browse, order and pay from home.", m: "/work/dallema-mobile.webp", d: "/work/dallema-desktop.webp" },
     { name: "Hafiz Books", url: "https://hafizbooks-store.vercel.app", label: "hafizbooks-store.vercel.app", what: "Bookshop web app for Bookshop Avenue: customers browse by genre, view books, and check out online.", m: "/work/hafizbooks-mobile.webp", d: "/work/hafizbooks-desktop.webp" },
   ]
   return (
-    <Section id="work" eyebrow="Proof" title="Real systems we've built" intro="Not mock-ups. These are live sites for real Kaduna businesses." tone="surface">
+    <Section id="work" eyebrow="Proof" title="Real systems we've built" intro="Not mock-ups. These are live sites for real Nigerian businesses." tone="surface">
       <div className="grid gap-10 lg:grid-cols-2">
         {items.map((x) => (
           <article key={x.name} className="rounded-3xl border border-se-border bg-se-bg p-6 md:p-8">
@@ -302,7 +302,7 @@ function Founder() {
           <h3 className="text-2xl font-bold text-se-ink">Damilare Oshinowo</h3>
           <p className="text-se-orange font-semibold">Founder, Scale-Edge Marketing LTD</p>
           <p className="mt-3 leading-relaxed text-se-muted-text">
-            I founded Scale-Edge Marketing LTD in Nigeria. We build custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing. Recent work includes Dalema, built for a shop in Abuja and Lagos, and Hungry Nomad, which takes 50–100 orders a week.
+            I founded Scale-Edge Marketing LTD in Nigeria. We build custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing. Recent work includes Dalema, built for a shop in Abuja and Kaduna, and Hungry Nomad, which takes 50–100 orders a week.
           </p>
         </div>
       </div>

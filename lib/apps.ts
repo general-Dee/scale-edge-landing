@@ -27,7 +27,7 @@ export const builtApps: BuiltApp[] = [
     tag: "Retail",
     badge: "Case study",
     description:
-      "Mobile-first retail web app for a neighbourhood shop with Abuja and Lagos branches, covering Supermarket, Bakery, Furniture and Bookstore departments.",
+      "Mobile-first retail web app for a neighbourhood shop with Abuja and Kaduna branches, covering Supermarket, Bakery, Furniture and Bookstore departments.",
     url: "https://dallema.vercel.app",
     // The live URL really is spelled with two Ls; show the brand name as the label.
     urlLabel: "Dalema",
