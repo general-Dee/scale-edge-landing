@@ -12,7 +12,8 @@ export interface BuiltApp {
   description: string
   stack?: string[]
   url?: string
-  urlLabel?: string
+  /** Link text shown on the card, e.g. "Visit site" or "View app". */
+  linkText?: "Visit site" | "View app"
 }
 
 export interface ClientSite {
@@ -28,9 +29,9 @@ export const builtApps: BuiltApp[] = [
     badge: "Case study",
     description:
       "Mobile-first retail web app for a neighbourhood shop with Abuja and Kaduna branches, covering Supermarket, Bakery, Furniture and Bookstore departments.",
+    // The live URL really is spelled with two Ls (the one-L address 404s).
     url: "https://dallema.vercel.app",
-    // The live URL really is spelled with two Ls; show the brand name as the label.
-    urlLabel: "Dalema",
+    linkText: "Visit site",
   },
   {
     name: "Hungry Nomad",
@@ -38,12 +39,14 @@ export const builtApps: BuiltApp[] = [
     description: "Food-ordering app built for the Kaduna market.",
     stack: ["Next.js", "Supabase", "Paystack"],
     url: "https://hungrynomad.menu",
-    urlLabel: "hungrynomad.menu",
+    linkText: "View app",
   },
   {
     name: "Delisha",
     tag: "Food ordering",
     description: "High-end food-ordering app for Kaduna restaurants, built with a premium look and feel.",
+    url: "https://delisha-app.vercel.app",
+    linkText: "View app",
   },
   {
     name: "Gold Journal AI",
@@ -51,19 +54,23 @@ export const builtApps: BuiltApp[] = [
     description:
       "AI trading and gold journal with analytics, discipline tracking and a mobile-first experience.",
     stack: ["TradingView"],
+    url: "https://gold-journal-ai.vercel.app",
+    linkText: "View app",
   },
   {
     name: "Funnel Ladder",
     tag: "Internal tool",
     description:
       "Our in-house marketing-ops tool for tracking ad spend and return, new-lead alerts and pipeline hygiene.",
+    url: "https://funnel-app-opal.vercel.app",
+    linkText: "View app",
   },
   {
     name: "Hafiz Books",
     tag: "Bookshop",
     description: "Bookstore client site with a secure admin area and password-reset setup.",
     url: "https://hafizbooks-store.vercel.app",
-    urlLabel: "hafizbooks-store.vercel.app",
+    linkText: "Visit site",
   },
   {
     name: "Uniform Nigeria",
@@ -71,13 +78,13 @@ export const builtApps: BuiltApp[] = [
     badge: "Case study build",
     description: "Mattress-finder quiz and online store that helps shoppers pick the right mattress.",
     url: "https://uniform-nigeria.vercel.app",
-    urlLabel: "uniform-nigeria.vercel.app",
+    linkText: "Visit site",
   },
 ]
 
 export const moreClientSites: ClientSite[] = [
   { name: "Voltream", domains: [{ domain: "admin.voltream.com", live: false }] },
-  { name: "Damau Milk Farm", domains: [{ domain: "damaumilkfarm.com", live: true }] },
+  { name: "Damau Milk Farm", domains: [{ domain: "damaumilkfarm.com", live: false }] },
   {
     name: "KMDMC",
     domains: [

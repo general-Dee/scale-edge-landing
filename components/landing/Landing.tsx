@@ -164,15 +164,15 @@ function AppsBuilt() {
             </div>
             <h3 className="mt-2 text-xl font-bold text-se-ink">{x.name}</h3>
             <p className="mt-2 leading-relaxed text-se-muted-text">{x.description}</p>
+            {x.url && (
+              <a href={x.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block self-start text-sm font-semibold text-se-orange underline underline-offset-4" aria-label={`Visit ${x.name}`}>
+                {x.linkText ?? "Visit site"} ↗
+              </a>
+            )}
             {x.stack && (
               <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${x.name} built with`}>
                 {x.stack.map((t) => <li key={t} className="rounded-full border border-se-border bg-se-bg px-2.5 py-0.5 text-xs font-medium text-se-ink">{t}</li>)}
               </ul>
-            )}
-            {x.url && (
-              <a href={x.url} target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 inline-block break-words text-sm font-semibold text-se-orange underline underline-offset-4" aria-label={x.urlLabel === x.name ? `Visit ${x.name}` : `Visit ${x.name} at ${x.urlLabel}`}>
-                {x.urlLabel} ↗
-              </a>
             )}
           </article>
         ))}
