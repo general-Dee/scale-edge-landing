@@ -1,4 +1,5 @@
 import { WA_LINK, INCLUDED } from "./links"
+import { builtApps, moreClientSites } from "@/lib/apps"
 
 const Check = () => (
   <svg viewBox="0 0 20 20" className="w-5 h-5 shrink-0 text-se-orange" fill="currentColor" aria-hidden="true">
@@ -74,6 +75,7 @@ function Header() {
         <a href="#top" className="text-xl font-bold tracking-tight text-se-ink"><span className="text-se-orange">Scale</span>-Edge</a>
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-se-muted-text">
           <a href="#work" className="hover:text-se-ink">Our work</a>
+          <a href="#apps" className="hover:text-se-ink">Apps</a>
           <a href="#what-you-get" className="hover:text-se-ink">What you get</a>
           <a href="#pricing" className="hover:text-se-ink">Pricing</a>
           <a href="#faq" className="hover:text-se-ink">FAQ</a>
@@ -130,7 +132,7 @@ function Hero() {
 function Proof() {
   const items = [
     { name: "Hungry Nomad", url: "https://hungrynomad.menu", label: "hungrynomad.menu", what: "Food ordering site in Kaduna. It now takes 50–100 orders a week.", m: "/work/hungrynomad-mobile.webp", d: "/work/hungrynomad-desktop.webp" },
-    { name: "Dallema", url: "https://dallema.vercel.app", label: "dallema.vercel.app", what: "Online shop built for a Kaduna shop: customers browse, order and pay from home.", m: "/work/dallema-mobile.webp", d: "/work/dallema-desktop.webp" },
+    { name: "Dalema", url: "https://dallema.vercel.app", label: "Dalema", what: "Online shop built for a Kaduna shop: customers browse, order and pay from home.", m: "/work/dallema-mobile.webp", d: "/work/dallema-desktop.webp" },
     { name: "Hafiz Books", url: "https://hafizbooks-store.vercel.app", label: "hafizbooks-store.vercel.app", what: "Bookshop web app for Bookshop Avenue: customers browse by genre, view books, and check out online.", m: "/work/hafizbooks-mobile.webp", d: "/work/hafizbooks-desktop.webp" },
   ]
   return (
@@ -145,6 +147,55 @@ function Proof() {
             <a href={x.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-semibold text-se-orange underline underline-offset-4">Visit {x.label} ↗</a>
           </article>
         ))}
+      </div>
+    </Section>
+  )
+}
+
+function AppsBuilt() {
+  return (
+    <Section id="apps" eyebrow="Portfolio" title="Apps we've built" intro="Real products for real Nigerian businesses, from shops and restaurants to the tools we run our own marketing on.">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {builtApps.map((x) => (
+          <article key={x.name} className="flex flex-col rounded-2xl border border-se-border bg-se-surface p-6 shadow-sm">
+            <div className="flex flex-wrap items-center gap-2">
+              <p className="text-sm font-semibold uppercase tracking-wide text-se-orange">{x.tag}</p>
+              {x.badge && <span className="rounded-full bg-se-orange/10 px-2.5 py-0.5 text-xs font-semibold text-se-orange">{x.badge}</span>}
+            </div>
+            <h3 className="mt-2 text-xl font-bold text-se-ink">{x.name}</h3>
+            <p className="mt-2 leading-relaxed text-se-muted-text">{x.description}</p>
+            {x.stack && (
+              <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${x.name} built with`}>
+                {x.stack.map((t) => <li key={t} className="rounded-full border border-se-border bg-se-bg px-2.5 py-0.5 text-xs font-medium text-se-ink">{t}</li>)}
+              </ul>
+            )}
+            {x.url && (
+              <a href={x.url} target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 inline-block break-words text-sm font-semibold text-se-orange underline underline-offset-4" aria-label={x.urlLabel === x.name ? `Visit ${x.name}` : `Visit ${x.name} at ${x.urlLabel}`}>
+                {x.urlLabel} ↗
+              </a>
+            )}
+          </article>
+        ))}
+        <article className="flex flex-col rounded-2xl border border-dashed border-se-border bg-se-bg p-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-se-orange">Client sites</p>
+          <h3 className="mt-2 text-xl font-bold text-se-ink">More client sites</h3>
+          <ul className="mt-4 space-y-3">
+            {moreClientSites.map((c) => (
+              <li key={c.name}>
+                <p className="font-semibold text-se-ink">{c.name}</p>
+                <p className="flex flex-wrap gap-x-3 text-sm text-se-muted-text">
+                  {c.domains.map((d) => (
+                    <span key={d.domain} className="break-words">
+                      {d.live
+                        ? <a href={`https://${d.domain}`} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-se-orange">{d.domain}</a>
+                        : d.domain}
+                    </span>
+                  ))}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </Section>
   )
@@ -251,7 +302,7 @@ function Founder() {
           <h3 className="text-2xl font-bold text-se-ink">Damilare Oshinowo</h3>
           <p className="text-se-orange font-semibold">Founder, Scale-Edge Marketing LTD</p>
           <p className="mt-3 leading-relaxed text-se-muted-text">
-            I founded Scale-Edge Marketing LTD in Nigeria. We build custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing. Recent work includes Dallema, built for a Kaduna shop, and Hungry Nomad, which takes 50–100 orders a week.
+            I founded Scale-Edge Marketing LTD in Nigeria. We build custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing. Recent work includes Dalema, built for a Kaduna shop, and Hungry Nomad, which takes 50–100 orders a week.
           </p>
         </div>
       </div>
@@ -324,6 +375,7 @@ export function Landing() {
       <Header />
       <Hero />
       <Proof />
+      <AppsBuilt />
       <WhatYouGet />
       <HowItWorks />
       <Guarantee />

@@ -85,7 +85,7 @@ export const founderBio = {
   bio:
     "Damilare Oshinowo founded Scale-Edge Marketing LTD in Nigeria. The company builds custom business systems (ordering sites, catalogues and dashboards) for local businesses free of charge, then ₦300,000/month covers maintenance and Meta-ads marketing.",
   work:
-    "Recent work includes Dallema, built for a Kaduna shop, and Hungry Nomad, which takes 50–100 orders a week.",
+    "Recent work includes Dalema, built for a Kaduna shop, and Hungry Nomad, which takes 50–100 orders a week.",
 }
 
 export const samplePosts: SamplePost[] = [
